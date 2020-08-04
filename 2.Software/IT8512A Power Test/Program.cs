@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace IT8512A_Test_Power
+namespace IT8512A_Power_Test
 {
     static class Program
     {
@@ -15,7 +16,7 @@ namespace IT8512A_Test_Power
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new mainForm());
         }
     }
 }

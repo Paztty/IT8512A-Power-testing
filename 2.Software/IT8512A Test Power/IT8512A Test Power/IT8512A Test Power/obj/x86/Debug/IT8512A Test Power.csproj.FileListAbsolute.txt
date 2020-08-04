@@ -1,7 +1,0 @@
-D:\DEV\3. DEV Projects\6. IT8512 test machine\2.Software\IT8512A Test Power\IT8512A Test Power\IT8512A Test Power\bin\Debug\IT8512A Test Power.exe
-D:\DEV\3. DEV Projects\6. IT8512 test machine\2.Software\IT8512A Test Power\IT8512A Test Power\IT8512A Test Power\bin\Debug\IT8512A Test Power.pdb
-D:\DEV\3. DEV Projects\6. IT8512 test machine\2.Software\IT8512A Test Power\IT8512A Test Power\IT8512A Test Power\obj\x86\Debug\IT8512A_Test_Power.Form1.resources
-D:\DEV\3. DEV Projects\6. IT8512 test machine\2.Software\IT8512A Test Power\IT8512A Test Power\IT8512A Test Power\obj\x86\Debug\IT8512A_Test_Power.Properties.Resources.resources
-D:\DEV\3. DEV Projects\6. IT8512 test machine\2.Software\IT8512A Test Power\IT8512A Test Power\IT8512A Test Power\obj\x86\Debug\IT8512A Test Power.csproj.GenerateResource.Cache
-D:\DEV\3. DEV Projects\6. IT8512 test machine\2.Software\IT8512A Test Power\IT8512A Test Power\IT8512A Test Power\obj\x86\Debug\IT8512A Test Power.exe
-D:\DEV\3. DEV Projects\6. IT8512 test machine\2.Software\IT8512A Test Power\IT8512A Test Power\IT8512A Test Power\obj\x86\Debug\IT8512A Test Power.pdb
