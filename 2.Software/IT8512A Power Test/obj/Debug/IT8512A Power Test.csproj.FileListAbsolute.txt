@@ -1,0 +1,10 @@
+D:\DEV\3. DEV Projects\6. IT8512 test machine\2.Software\IT8512A Power Test\obj\Debug\IT8512A Power Test.csprojAssemblyReference.cache
+D:\DEV\3. DEV Projects\6. IT8512 test machine\2.Software\IT8512A Power Test\obj\Debug\IT8512A_Power_Test.mainForm.resources
+D:\DEV\3. DEV Projects\6. IT8512 test machine\2.Software\IT8512A Power Test\obj\Debug\IT8512A_Power_Test.Properties.Resources.resources
+D:\DEV\3. DEV Projects\6. IT8512 test machine\2.Software\IT8512A Power Test\obj\Debug\IT8512A Power Test.csproj.GenerateResource.cache
+D:\DEV\3. DEV Projects\6. IT8512 test machine\2.Software\IT8512A Power Test\obj\Debug\IT8512A Power Test.csproj.CoreCompileInputs.cache
+D:\DEV\3. DEV Projects\6. IT8512 test machine\2.Software\IT8512A Power Test\bin\Debug\IT8512A Power Test.exe.config
+D:\DEV\3. DEV Projects\6. IT8512 test machine\2.Software\IT8512A Power Test\bin\Debug\IT8512A Power Test.exe
+D:\DEV\3. DEV Projects\6. IT8512 test machine\2.Software\IT8512A Power Test\bin\Debug\IT8512A Power Test.pdb
+D:\DEV\3. DEV Projects\6. IT8512 test machine\2.Software\IT8512A Power Test\obj\Debug\IT8512A Power Test.exe
+D:\DEV\3. DEV Projects\6. IT8512 test machine\2.Software\IT8512A Power Test\obj\Debug\IT8512A Power Test.pdb
