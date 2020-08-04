@@ -26,7 +26,10 @@ namespace IT8512A_Power_Test
         SerialPort serialPort1 = new SerialPort();
         delegate void SetTextCallback(String data);
         String InputData = String.Empty;
+        String InputDataBuffer = String.Empty;
         String[] PortName = { };
+
+        public byte[] readCmd = { 0xaa, 0x00, 0x5f, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x09 };
 
         public mainForm()
         {
@@ -54,14 +57,28 @@ namespace IT8512A_Power_Test
                 SetTextCallback d = new SetTextCallback(SetText); // khởi tạo 1 delegate mới gọi đến SetText
                 this.Invoke(d, new object[] { text });
             }
-            else this.textDataResponse.Text += text;
+            else
+            {
+                this.textDataResponse.Text += Convert.ToInt32(text);
+            }
         }
 
          private void mainForm_Load(object sender, EventArgs e)
          {
             serialPort1.Open();
             PortLabel.Text = PortName[0];
+            textBox1_Update();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            serialPort1.Write(readCmd, 0, 26);
+            textBox1_Update();
+        }
+
+        private void textBox1_Update()
+        {
+            textBox1.Text += InputData.Length;
+        }
     }
 }

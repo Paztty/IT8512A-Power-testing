@@ -34,6 +34,7 @@ namespace IT8512A_Power_Test
             this.button1 = new System.Windows.Forms.Button();
             this.textDataResponse = new System.Windows.Forms.TextBox();
             this.PortLabel = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // button1
@@ -44,6 +45,7 @@ namespace IT8512A_Power_Test
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 0;
             this.button1.Text = "Test";
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // textDataResponse
             // 
@@ -61,11 +63,20 @@ namespace IT8512A_Power_Test
             this.PortLabel.TabIndex = 2;
             this.PortLabel.Text = "label1";
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(68, 223);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(525, 20);
+            this.textBox1.TabIndex = 3;
+
+            // 
             // mainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.PortLabel);
             this.Controls.Add(this.textDataResponse);
             this.Controls.Add(this.button1);
@@ -84,6 +95,7 @@ namespace IT8512A_Power_Test
         private System.Windows.Forms.TextBox textDataResponse;
         public Label PortLabel;
         private Button button1;
+        private TextBox textBox1;
     }
 }
 
