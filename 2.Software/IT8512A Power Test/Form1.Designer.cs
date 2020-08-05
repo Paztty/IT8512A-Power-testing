@@ -30,9 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
@@ -62,15 +62,15 @@
             this.label16 = new System.Windows.Forms.Label();
             this.Port = new System.IO.Ports.SerialPort(this.components);
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.toolStripSplitButton1 = new System.Windows.Forms.ToolStripSplitButton();
-            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
+            this.toolStripStatusConnect = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripProgressDataReciver = new System.Windows.Forms.ToolStripProgressBar();
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.labelResultA = new System.Windows.Forms.Label();
             this.labelResultB = new System.Windows.Forms.Label();
+            this.buttonSetting = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
@@ -188,18 +188,18 @@
             // chartDailyResult
             // 
             this.chartDailyResult.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dash;
-            chartArea1.Name = "ChartArea1";
-            this.chartDailyResult.ChartAreas.Add(chartArea1);
+            chartArea2.Name = "ChartArea1";
+            this.chartDailyResult.ChartAreas.Add(chartArea2);
             this.chartDailyResult.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend1.Name = "Legend1";
-            this.chartDailyResult.Legends.Add(legend1);
+            legend2.Name = "Legend1";
+            this.chartDailyResult.Legends.Add(legend2);
             this.chartDailyResult.Location = new System.Drawing.Point(3, 3);
             this.chartDailyResult.Name = "chartDailyResult";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chartDailyResult.Series.Add(series1);
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.chartDailyResult.Series.Add(series2);
             this.chartDailyResult.Size = new System.Drawing.Size(315, 278);
             this.chartDailyResult.TabIndex = 1;
             this.chartDailyResult.Text = "chart1";
@@ -262,7 +262,7 @@
             this.label4.TabIndex = 3;
             this.label4.Text = "SET";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label4.Click += new System.EventHandler(this.label4_Click);
+
             // 
             // labelVoltageA
             // 
@@ -464,35 +464,25 @@
             // statusStrip1
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripSplitButton1,
-            this.toolStripStatusLabel1,
-            this.toolStripProgressBar1,
-            this.toolStripStatusLabel2});
+            this.toolStripStatusConnect,
+            this.toolStripStatusLabel2,
+            this.toolStripProgressDataReciver});
             this.statusStrip1.Location = new System.Drawing.Point(0, 597);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(1111, 22);
             this.statusStrip1.TabIndex = 3;
             this.statusStrip1.Text = "statusStrip1";
             // 
-            // toolStripSplitButton1
+            // toolStripStatusConnect
             // 
-            this.toolStripSplitButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripSplitButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripSplitButton1.Image")));
-            this.toolStripSplitButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripSplitButton1.Name = "toolStripSplitButton1";
-            this.toolStripSplitButton1.Size = new System.Drawing.Size(32, 20);
-            this.toolStripSplitButton1.Text = "toolStripSplitButton1";
+            this.toolStripStatusConnect.Name = "toolStripStatusConnect";
+            this.toolStripStatusConnect.Size = new System.Drawing.Size(114, 17);
+            this.toolStripStatusConnect.Text = "ITA8512A connected";
             // 
-            // toolStripStatusLabel1
+            // toolStripProgressDataReciver
             // 
-            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(114, 17);
-            this.toolStripStatusLabel1.Text = "ITA8512A connected";
-            // 
-            // toolStripProgressBar1
-            // 
-            this.toolStripProgressBar1.Name = "toolStripProgressBar1";
-            this.toolStripProgressBar1.Size = new System.Drawing.Size(100, 16);
+            this.toolStripProgressDataReciver.Name = "toolStripProgressDataReciver";
+            this.toolStripProgressDataReciver.Size = new System.Drawing.Size(100, 16);
             // 
             // toolStripStatusLabel2
             // 
@@ -508,6 +498,7 @@
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 367F));
             this.tableLayoutPanel5.Controls.Add(this.comboBox1, 1, 0);
             this.tableLayoutPanel5.Controls.Add(this.label6, 0, 0);
+            this.tableLayoutPanel5.Controls.Add(this.buttonSetting, 2, 0);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel5.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
@@ -568,6 +559,18 @@
             this.labelResultB.Text = "NG";
             this.labelResultB.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // buttonSetting
+            // 
+            this.buttonSetting.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonSetting.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSetting.Location = new System.Drawing.Point(1026, 19);
+            this.buttonSetting.Margin = new System.Windows.Forms.Padding(3, 3, 10, 10);
+            this.buttonSetting.Name = "buttonSetting";
+            this.buttonSetting.Size = new System.Drawing.Size(75, 23);
+            this.buttonSetting.TabIndex = 2;
+            this.buttonSetting.Text = "Setting";
+            this.buttonSetting.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -624,9 +627,8 @@
         private System.Windows.Forms.Label label12;
         private System.IO.Ports.SerialPort Port;
         private System.Windows.Forms.StatusStrip statusStrip1;
-        private System.Windows.Forms.ToolStripSplitButton toolStripSplitButton1;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
-        private System.Windows.Forms.ToolStripProgressBar toolStripProgressBar1;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusConnect;
+        private System.Windows.Forms.ToolStripProgressBar toolStripProgressDataReciver;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private System.Windows.Forms.ComboBox comboBox1;
@@ -637,6 +639,7 @@
         public System.Windows.Forms.Label labelVoltageB;
         public System.Windows.Forms.Label labelResultB;
         public System.Windows.Forms.Label labelResultA;
+        private System.Windows.Forms.Button buttonSetting;
     }
 }
 

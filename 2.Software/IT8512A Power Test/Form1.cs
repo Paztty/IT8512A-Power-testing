@@ -22,9 +22,6 @@ namespace IT8512A_Power_Test
 
         }
 
-        private void label4_Click(object sender, EventArgs e)
-        {
 
-        }
     }
 }
