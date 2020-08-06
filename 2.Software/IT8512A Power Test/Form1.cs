@@ -40,7 +40,10 @@ namespace IT8512A_Power_Test
         public string String_response = string.Empty;
         bool Message_allow = true;
         public String DataReciver = string.Empty;
+
         delegate void SetTextCallback(string text);
+
+
 
         public void Serial_UI_init()
         {
@@ -175,19 +178,17 @@ namespace IT8512A_Power_Test
         private void buttonRefesh_Click(object sender, EventArgs e)
         {
             //comboBoxComPort.DataSource = SerialPort.GetPortNames();
-            Port.DiscardOutBuffer();
-            Port.Write(readCmd, 0, 26);
-            rawResponse.Text = "";
-        }
+
+        } 
         private void timer1_Tick(object sender, EventArgs e)
         {
             try
             {
                 if (Port.IsOpen)
                 {
-                    //Port.DiscardOutBuffer();
-                    //Port.Write(readCmd, 0, 26);
-                    //rawResponse.Text = "";
+                    Port.DiscardOutBuffer();
+                    Port.Write(readCmd, 0, 26);
+                    rawResponse.Text = "";
                 }
             }
             catch (Exception Port)
@@ -213,22 +214,39 @@ namespace IT8512A_Power_Test
         // Reciver data
         private void DataReceive(object obj, SerialDataReceivedEventArgs e)
         {
-            String InputData = Port.ReadExisting();
-            if (InputData != String.Empty)
+            if (!Port.IsOpen) return;
+            int bytes = Port.BytesToRead;
+            byte[] buffer = new byte[bytes];
+            Port.Read(buffer, 0, bytes);
+            string InputData = string.Empty;
+            string InputDataBuffer = string.Empty;
+            for (int i = 0; i < buffer.Length; i++)
             {
-                SetText(InputData); // Chính vì vậy phải sử dụng ủy quyền tại đây. Gọi delegate đã khai báo trước đó
+                try
+                {
+                    InputData += buffer[i].ToString("X2");
+                }
+                catch (Exception )
+                { 
+                
+                }
             }
+            SetText(InputData);
         }
         private void SetText(string text)
         {
+            // InvokeRequired required compares the thread ID of the
+            // calling thread to the thread ID of the creating thread.
+            // If these threads are different, it returns true.
             if (this.rawResponse.InvokeRequired)
             {
-                SetTextCallback d = new SetTextCallback(SetText); // khởi tạo 1 delegate mới gọi đến SetText
+                SetTextCallback d = new SetTextCallback(SetText);
                 this.Invoke(d, new object[] { text });
             }
-            else 
-            { 
+            else
+            {
                 this.rawResponse.Text += text;
+                rawRespons_to_singleUpdate(rawResponse.Text);
             }
         }
         // End Serial code
@@ -290,16 +308,38 @@ namespace IT8512A_Power_Test
             labelfinalTestResult.Text = "NG";
         }
 
-        
 
 
-        public void rawResponsUpdate()
+
+        public void rawRespons_to_singleUpdate(string InputString)
         {
-            rawResponse.Text = String_response;
+            int num;
+            double value;
+            string hexString;
+            try
+            {
+                 hexString= Reverse(InputString.Substring(6, 8));
+                 num = Int32.Parse(hexString, System.Globalization.NumberStyles.HexNumber);
+                 value = num / 1000.0;
+                 labelGetVolA.Text = value.ToString();
+
+            }
+            catch (Exception)
+            { 
+            }
+
         }
-
-
-
+        public string Reverse(string text)
+        {
+            char[] cArray = text.ToCharArray();
+            string reverse = String.Empty;
+            for (int i = cArray.Length - 2; i > -1; i = i - 2)
+            {
+                reverse += cArray[i];
+                reverse += cArray[i+1];
+            }
+            return reverse;
+        }
 
 
 
@@ -308,7 +348,12 @@ namespace IT8512A_Power_Test
 
         // end set result label status 
 
-        
 
+
+    }
+
+    public class RespData
+    {
+       public byte[] data = new byte[100];
     }
 }

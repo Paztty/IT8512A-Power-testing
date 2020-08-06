@@ -386,7 +386,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.30055F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.39344F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.786885F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 323F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 334F));
             this.tableLayoutPanel2.Controls.Add(this.buttonSerialConnect, 6, 0);
             this.tableLayoutPanel2.Controls.Add(this.comboBoxComPort, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.label16, 4, 0);
@@ -414,10 +414,10 @@
             this.buttonSerialConnect.Dock = System.Windows.Forms.DockStyle.Fill;
             this.buttonSerialConnect.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSerialConnect.ForeColor = System.Drawing.Color.Red;
-            this.buttonSerialConnect.Location = new System.Drawing.Point(724, 3);
+            this.buttonSerialConnect.Location = new System.Drawing.Point(714, 3);
             this.buttonSerialConnect.Name = "buttonSerialConnect";
             this.tableLayoutPanel2.SetRowSpan(this.buttonSerialConnect, 2);
-            this.buttonSerialConnect.Size = new System.Drawing.Size(321, 45);
+            this.buttonSerialConnect.Size = new System.Drawing.Size(331, 45);
             this.buttonSerialConnect.TabIndex = 13;
             this.buttonSerialConnect.Text = "CONNECT";
             this.buttonSerialConnect.UseVisualStyleBackColor = false;
@@ -429,7 +429,7 @@
             this.comboBoxComPort.FormattingEnabled = true;
             this.comboBoxComPort.Location = new System.Drawing.Point(3, 28);
             this.comboBoxComPort.Name = "comboBoxComPort";
-            this.comboBoxComPort.Size = new System.Drawing.Size(138, 21);
+            this.comboBoxComPort.Size = new System.Drawing.Size(136, 21);
             this.comboBoxComPort.TabIndex = 11;
             this.comboBoxComPort.SelectedIndexChanged += new System.EventHandler(this.comboBoxComPort_SelectedIndexChanged);
             // 
@@ -438,9 +438,9 @@
             this.label16.AutoSize = true;
             this.label16.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label16.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(550, 0);
+            this.label16.Location = new System.Drawing.Point(542, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(112, 25);
+            this.label16.Size = new System.Drawing.Size(111, 25);
             this.label16.TabIndex = 10;
             this.label16.Text = "END BIT";
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -450,9 +450,9 @@
             this.label15.AutoSize = true;
             this.label15.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label15.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(440, 0);
+            this.label15.Location = new System.Drawing.Point(433, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(104, 25);
+            this.label15.Size = new System.Drawing.Size(103, 25);
             this.label15.TabIndex = 9;
             this.label15.Text = "PARITY";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -462,9 +462,9 @@
             this.label14.AutoSize = true;
             this.label14.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label14.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(320, 0);
+            this.label14.Location = new System.Drawing.Point(315, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(114, 25);
+            this.label14.Size = new System.Drawing.Size(112, 25);
             this.label14.TabIndex = 8;
             this.label14.Text = "DATABIT";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -474,9 +474,9 @@
             this.label13.AutoSize = true;
             this.label13.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label13.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(147, 0);
+            this.label13.Location = new System.Drawing.Point(145, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(167, 25);
+            this.label13.Size = new System.Drawing.Size(164, 25);
             this.label13.TabIndex = 7;
             this.label13.Text = "BAUDRATE";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -485,9 +485,9 @@
             // 
             this.comboBoxEndBit.Dock = System.Windows.Forms.DockStyle.Fill;
             this.comboBoxEndBit.FormattingEnabled = true;
-            this.comboBoxEndBit.Location = new System.Drawing.Point(550, 28);
+            this.comboBoxEndBit.Location = new System.Drawing.Point(542, 28);
             this.comboBoxEndBit.Name = "comboBoxEndBit";
-            this.comboBoxEndBit.Size = new System.Drawing.Size(112, 21);
+            this.comboBoxEndBit.Size = new System.Drawing.Size(111, 21);
             this.comboBoxEndBit.TabIndex = 4;
             this.comboBoxEndBit.SelectedIndexChanged += new System.EventHandler(this.comboBoxEndBit_SelectedIndexChanged);
             // 
@@ -495,9 +495,9 @@
             // 
             this.comboBoxParity.Dock = System.Windows.Forms.DockStyle.Fill;
             this.comboBoxParity.FormattingEnabled = true;
-            this.comboBoxParity.Location = new System.Drawing.Point(440, 28);
+            this.comboBoxParity.Location = new System.Drawing.Point(433, 28);
             this.comboBoxParity.Name = "comboBoxParity";
-            this.comboBoxParity.Size = new System.Drawing.Size(104, 21);
+            this.comboBoxParity.Size = new System.Drawing.Size(103, 21);
             this.comboBoxParity.TabIndex = 3;
             this.comboBoxParity.SelectedIndexChanged += new System.EventHandler(this.comboBoxParity_SelectedIndexChanged);
             // 
@@ -505,9 +505,9 @@
             // 
             this.comboBoxDatabit.Dock = System.Windows.Forms.DockStyle.Fill;
             this.comboBoxDatabit.FormattingEnabled = true;
-            this.comboBoxDatabit.Location = new System.Drawing.Point(320, 28);
+            this.comboBoxDatabit.Location = new System.Drawing.Point(315, 28);
             this.comboBoxDatabit.Name = "comboBoxDatabit";
-            this.comboBoxDatabit.Size = new System.Drawing.Size(114, 21);
+            this.comboBoxDatabit.Size = new System.Drawing.Size(112, 21);
             this.comboBoxDatabit.TabIndex = 2;
             this.comboBoxDatabit.SelectedIndexChanged += new System.EventHandler(this.comboBoxDatabit_SelectedIndexChanged);
             // 
@@ -515,9 +515,9 @@
             // 
             this.comboBoxBaudrate.Dock = System.Windows.Forms.DockStyle.Fill;
             this.comboBoxBaudrate.FormattingEnabled = true;
-            this.comboBoxBaudrate.Location = new System.Drawing.Point(147, 28);
+            this.comboBoxBaudrate.Location = new System.Drawing.Point(145, 28);
             this.comboBoxBaudrate.Name = "comboBoxBaudrate";
-            this.comboBoxBaudrate.Size = new System.Drawing.Size(167, 21);
+            this.comboBoxBaudrate.Size = new System.Drawing.Size(164, 21);
             this.comboBoxBaudrate.TabIndex = 1;
             this.comboBoxBaudrate.SelectedIndexChanged += new System.EventHandler(this.comboBoxBaudrate_SelectedIndexChanged);
             // 
@@ -528,7 +528,7 @@
             this.label12.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(3, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(138, 25);
+            this.label12.Size = new System.Drawing.Size(136, 25);
             this.label12.TabIndex = 6;
             this.label12.Text = "COM PORT";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -539,10 +539,10 @@
             this.buttonRefesh.BackgroundImage = global::IT8512A_Power_Test.Properties.Resources.refesh_icon;
             this.buttonRefesh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.buttonRefesh.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonRefesh.Location = new System.Drawing.Point(668, 3);
+            this.buttonRefesh.Location = new System.Drawing.Point(659, 3);
             this.buttonRefesh.Name = "buttonRefesh";
             this.tableLayoutPanel2.SetRowSpan(this.buttonRefesh, 2);
-            this.buttonRefesh.Size = new System.Drawing.Size(50, 45);
+            this.buttonRefesh.Size = new System.Drawing.Size(49, 45);
             this.buttonRefesh.TabIndex = 12;
             this.buttonRefesh.UseVisualStyleBackColor = false;
             this.buttonRefesh.Click += new System.EventHandler(this.buttonRefesh_Click);
@@ -638,6 +638,7 @@
             // 
             // timer1
             // 
+            this.timer1.Interval = 500;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Form1
