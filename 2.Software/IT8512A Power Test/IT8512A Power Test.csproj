@@ -84,5 +84,8 @@
   <ItemGroup>
     <None Include="icon\IT8512A.jfif" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\refesh icon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
