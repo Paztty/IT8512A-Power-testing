@@ -19,14 +19,19 @@ namespace IT8512A_Power_Test
         public Form1()
         {
             InitializeComponent();
-            Serial_UI_init();
             Port.DataReceived += new SerialDataReceivedEventHandler(DataReceive);
         }
 
         // Form load funtion
+        public bool ComponentInitted = false;
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            if (ComponentInitted == false)
+            {
+                Serial_UI_init();
+                ComponentInitted = true;
+            }
+            ProductindomationInit();
         }
         // End Form load function
 
@@ -40,10 +45,45 @@ namespace IT8512A_Power_Test
         public string String_response = string.Empty;
         bool Message_allow = true;
         public String DataReciver = string.Empty;
+        public string DataRespose = string.Empty;
 
         delegate void SetTextCallback(string text);
 
+        // check var
+        public static double VolA_H, VolA_L, VolB_H, VolB_L;
+        public string _result_A, _result_B;
 
+        // end check var
+
+        // product code
+        public static productCode[] productsList =
+                { new productCode("DJ96-00216", 37.6,37.4,37.6,37.4),
+                  new productCode("DJ96-00204", 24.95, 24.8, 24.95, 24.8),
+                  new productCode("DJ96-00210", 20.8, 20.6, 20.8, 20.6),
+                  new productCode("DJ96-00222", 25.95, 25.75, 25.95, 25.75),
+                    };
+
+        public void ProductindomationInit()
+        {
+            string[] productNameList = new string[productsList.Length];
+            for (int i = 0; i < productsList.Length; i++)
+            {
+                productNameList[i] = productsList[i].name;
+            }
+            comboBoxProductCode.DataSource = productNameList;
+            comboBoxProductCode.SelectedIndex = 0;
+            VolA_H = productsList[comboBoxProductCode.SelectedIndex].AVoltageHighLevel;
+            VolB_H = productsList[comboBoxProductCode.SelectedIndex].BVoltageHighLevel;
+            VolA_L = productsList[comboBoxProductCode.SelectedIndex].AVoltageLowLevel;
+            VolB_L = productsList[comboBoxProductCode.SelectedIndex].BVoltageLowLevel;
+            labelVoltageA.Text = ((VolA_H + VolA_L)/2.0).ToString() + " V";
+            labelVoltageB.Text = ((VolB_H + VolB_L) / 2.0).ToString() + " V";
+            setLabelB_Empty();
+            setLabelA_Empty();
+            setLabelfinalTestResult_Empty();
+        }
+
+        // end product code
 
         public void Serial_UI_init()
         {
@@ -63,13 +103,6 @@ namespace IT8512A_Power_Test
             Port.StopBits = StopBits.One;
             Port.BaudRate = Convert.ToInt32(comboBoxBaudrate.Text);
             Console.Write("Begin");
-        }
-        private static void DataReceivedHandler(object sender, SerialDataReceivedEventArgs e)
-        {
-            SerialPort sp = (SerialPort)sender;
-            string indata = sp.ReadExisting();
-            Console.WriteLine("Data Received:");
-            Console.Write(indata);
         }
         // Sellect com port
         private void comboBoxComPort_SelectedIndexChanged(object sender, EventArgs e)
@@ -177,9 +210,9 @@ namespace IT8512A_Power_Test
 
         private void buttonRefesh_Click(object sender, EventArgs e)
         {
-            //comboBoxComPort.DataSource = SerialPort.GetPortNames();
+            comboBoxComPort.DataSource = SerialPort.GetPortNames();
 
-        } 
+        }
         private void timer1_Tick(object sender, EventArgs e)
         {
             try
@@ -188,7 +221,7 @@ namespace IT8512A_Power_Test
                 {
                     Port.DiscardOutBuffer();
                     Port.Write(readCmd, 0, 26);
-                    rawResponse.Text = "";
+                    //rawResponse.Text = "";
                 }
             }
             catch (Exception Port)
@@ -226,9 +259,9 @@ namespace IT8512A_Power_Test
                 {
                     InputData += buffer[i].ToString("X2");
                 }
-                catch (Exception )
-                { 
-                
+                catch (Exception)
+                {
+
                 }
             }
             SetText(InputData);
@@ -245,12 +278,70 @@ namespace IT8512A_Power_Test
             }
             else
             {
-                this.rawResponse.Text += text;
-                rawRespons_to_singleUpdate(rawResponse.Text);
+                DataRespose += text;
+                rawRespons_to_singleUpdate(DataRespose);
             }
         }
         // End Serial code
 
+        // check value
+        private void checkValue(double volIn, string chanel)
+        {
+            labelGetVolA.Text = volIn.ToString() + " V";
+            if (chanel == "chanelA")
+            {
+                if (VolA_L <= volIn && volIn <= VolA_H)
+                {
+                    setLabelA_OK();
+                    _result_A = "OK";
+                }
+                    
+
+                else if (volIn == 0)
+                {
+                    setLabelA_Empty();
+                    _result_A = "Empty";
+                }
+                else if (volIn > 0)
+                {
+                    setLabelA_NG();
+                    _result_A = "NG";
+                }
+                    
+            }
+            if (chanel == "chanelB")
+            {
+                if (VolB_L <= volIn && volIn <= VolB_H)
+                {
+                    setLabelB_OK();
+                    _result_B = "OK";
+                }
+                else if (volIn == 0)
+                {
+                    setLabelB_Empty();
+                    _result_B = "Empty";
+                }
+                else if (volIn > 0)
+                {
+                    setLabelB_NG();
+                    _result_B = "NG";
+                }
+            }
+            if (_result_A == "OK" && _result_B == "OK")
+            {
+                setLabelfinalTestResult_OK();
+            }
+            if (_result_A == "NG" || _result_B == "NG")
+            {
+                setLabelfinalTestResult_NG();
+            }
+            if (_result_A == "Empty" || _result_B == "Empty")
+            {
+                setLabelfinalTestResult_Empty();
+            }
+
+        }
+        //End check value
 
         // Set result label on UI 
         public void setLabelA_OK()
@@ -295,6 +386,25 @@ namespace IT8512A_Power_Test
             labelfinalTestResult.ForeColor = System.Drawing.Color.White;
             labelfinalTestResult.Text = "Empty";
         }
+
+        public void comboBoxProductCode_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            VolA_H = productsList[comboBoxProductCode.SelectedIndex].AVoltageHighLevel;
+            VolB_H = productsList[comboBoxProductCode.SelectedIndex].BVoltageHighLevel;
+            VolA_L = productsList[comboBoxProductCode.SelectedIndex].AVoltageLowLevel;
+            VolB_L = productsList[comboBoxProductCode.SelectedIndex].BVoltageLowLevel;
+            labelVoltageA.Text = ((VolA_H + VolA_L) / 2.0).ToString() + " V";
+            labelVoltageB.Text = ((VolB_H + VolB_L) / 2.0).ToString() + " V";
+            setLabelB_Empty();
+            setLabelA_Empty();
+            setLabelfinalTestResult_Empty();
+        }
+
+        private void buttonSetting_Click(object sender, EventArgs e)
+        {
+            new Form2().Show();
+        }
+
         public void setLabelfinalTestResult_OK()
         {
             labelfinalTestResult.BackColor = System.Drawing.Color.White;
@@ -313,19 +423,19 @@ namespace IT8512A_Power_Test
 
         public void rawRespons_to_singleUpdate(string InputString)
         {
+            //rawResponse.Text = InputString;
             int num;
             double value;
             string hexString;
             try
             {
-                 hexString= Reverse(InputString.Substring(6, 8));
-                 num = Int32.Parse(hexString, System.Globalization.NumberStyles.HexNumber);
-                 value = num / 1000.0;
-                 labelGetVolA.Text = value.ToString();
-
+                hexString = Reverse(InputString.Substring(6, 8));
+                num = Int32.Parse(hexString, System.Globalization.NumberStyles.HexNumber);
+                value = num / 1000.0;
+                checkValue(value, "chanelA");
             }
             catch (Exception)
-            { 
+            {
             }
 
         }
@@ -336,7 +446,7 @@ namespace IT8512A_Power_Test
             for (int i = cArray.Length - 2; i > -1; i = i - 2)
             {
                 reverse += cArray[i];
-                reverse += cArray[i+1];
+                reverse += cArray[i + 1];
             }
             return reverse;
         }
@@ -352,8 +462,22 @@ namespace IT8512A_Power_Test
 
     }
 
-    public class RespData
+    public class productCode
     {
-       public byte[] data = new byte[100];
+        public string name;
+        public double AVoltageHighLevel;
+        public double BVoltageHighLevel;
+        public double AVoltageLowLevel;
+        public double BVoltageLowLevel;
+
+        public productCode(string name, double AvolHighLevel, double AvolLowLevel, double BvolHighLevel, double BvolLowLevel)
+        {
+            this.name = name;
+            this.AVoltageHighLevel = AvolHighLevel;
+            this.AVoltageLowLevel = AvolLowLevel;
+            this.BVoltageHighLevel = BvolHighLevel;
+            this.BVoltageLowLevel = BvolLowLevel;
+        }
+
     }
 }
