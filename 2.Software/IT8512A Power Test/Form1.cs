@@ -19,19 +19,19 @@ namespace IT8512A_Power_Test
         public Form1()
         {
             InitializeComponent();
+            Serial_UI_init();
+            ProductindomationInit();
             Port.DataReceived += new SerialDataReceivedEventHandler(DataReceive);
         }
 
         // Form load funtion
         public bool ComponentInitted = false;
-        private void Form1_Load(object sender, EventArgs e)
+        public void Form1_Load(object sender, EventArgs e)
         {
             if (ComponentInitted == false)
             {
-                Serial_UI_init();
                 ComponentInitted = true;
             }
-            ProductindomationInit();
         }
         // End Form load function
 
@@ -52,6 +52,7 @@ namespace IT8512A_Power_Test
         // check var
         public static double VolA_H, VolA_L, VolB_H, VolB_L;
         public string _result_A, _result_B;
+        public static bool form2Close;
 
         // end check var
 
@@ -76,8 +77,8 @@ namespace IT8512A_Power_Test
             VolB_H = productsList[comboBoxProductCode.SelectedIndex].BVoltageHighLevel;
             VolA_L = productsList[comboBoxProductCode.SelectedIndex].AVoltageLowLevel;
             VolB_L = productsList[comboBoxProductCode.SelectedIndex].BVoltageLowLevel;
-            labelVoltageA.Text = ((VolA_H + VolA_L)/2.0).ToString() + " V";
-            labelVoltageB.Text = ((VolB_H + VolB_L) / 2.0).ToString() + " V";
+            labelVoltageA.Text = ((VolA_H + VolA_L)/2.0).ToString("F3") + " V";
+            labelVoltageB.Text = ((VolB_H + VolB_L) / 2.0).ToString("F3") + " V";
             setLabelB_Empty();
             setLabelA_Empty();
             setLabelfinalTestResult_Empty();
@@ -393,8 +394,8 @@ namespace IT8512A_Power_Test
             VolB_H = productsList[comboBoxProductCode.SelectedIndex].BVoltageHighLevel;
             VolA_L = productsList[comboBoxProductCode.SelectedIndex].AVoltageLowLevel;
             VolB_L = productsList[comboBoxProductCode.SelectedIndex].BVoltageLowLevel;
-            labelVoltageA.Text = ((VolA_H + VolA_L) / 2.0).ToString() + " V";
-            labelVoltageB.Text = ((VolB_H + VolB_L) / 2.0).ToString() + " V";
+            labelVoltageA.Text = ((VolA_H + VolA_L) / 2.0).ToString("F3") + " V";
+            labelVoltageB.Text = ((VolB_H + VolB_L) / 2.0).ToString("F3") + " V";
             setLabelB_Empty();
             setLabelA_Empty();
             setLabelfinalTestResult_Empty();
@@ -402,8 +403,11 @@ namespace IT8512A_Power_Test
 
         private void buttonSetting_Click(object sender, EventArgs e)
         {
+            form2Close = false;
             new Form2().Show();
         }
+
+
 
         public void setLabelfinalTestResult_OK()
         {

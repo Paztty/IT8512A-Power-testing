@@ -30,9 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.labelResultB = new System.Windows.Forms.Label();
@@ -350,18 +350,18 @@
             // chartDailyResult
             // 
             this.chartDailyResult.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dash;
-            chartArea2.Name = "ChartArea1";
-            this.chartDailyResult.ChartAreas.Add(chartArea2);
+            chartArea1.Name = "ChartArea1";
+            this.chartDailyResult.ChartAreas.Add(chartArea1);
             this.chartDailyResult.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend2.Name = "Legend1";
-            this.chartDailyResult.Legends.Add(legend2);
+            legend1.Name = "Legend1";
+            this.chartDailyResult.Legends.Add(legend1);
             this.chartDailyResult.Location = new System.Drawing.Point(3, 3);
             this.chartDailyResult.Name = "chartDailyResult";
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.chartDailyResult.Series.Add(series2);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chartDailyResult.Series.Add(series1);
             this.chartDailyResult.Size = new System.Drawing.Size(303, 234);
             this.chartDailyResult.TabIndex = 1;
             this.chartDailyResult.Text = "chart1";
@@ -386,7 +386,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.30055F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.39344F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.786885F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 375F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 386F));
             this.tableLayoutPanel2.Controls.Add(this.buttonSerialConnect, 6, 0);
             this.tableLayoutPanel2.Controls.Add(this.comboBoxComPort, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.label16, 4, 0);
@@ -414,10 +414,10 @@
             this.buttonSerialConnect.Dock = System.Windows.Forms.DockStyle.Fill;
             this.buttonSerialConnect.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSerialConnect.ForeColor = System.Drawing.Color.Red;
-            this.buttonSerialConnect.Location = new System.Drawing.Point(673, 3);
+            this.buttonSerialConnect.Location = new System.Drawing.Point(663, 3);
             this.buttonSerialConnect.Name = "buttonSerialConnect";
             this.tableLayoutPanel2.SetRowSpan(this.buttonSerialConnect, 2);
-            this.buttonSerialConnect.Size = new System.Drawing.Size(372, 45);
+            this.buttonSerialConnect.Size = new System.Drawing.Size(382, 45);
             this.buttonSerialConnect.TabIndex = 13;
             this.buttonSerialConnect.Text = "CONNECT";
             this.buttonSerialConnect.UseVisualStyleBackColor = false;
@@ -429,7 +429,7 @@
             this.comboBoxComPort.FormattingEnabled = true;
             this.comboBoxComPort.Location = new System.Drawing.Point(3, 28);
             this.comboBoxComPort.Name = "comboBoxComPort";
-            this.comboBoxComPort.Size = new System.Drawing.Size(128, 21);
+            this.comboBoxComPort.Size = new System.Drawing.Size(126, 21);
             this.comboBoxComPort.TabIndex = 11;
             this.comboBoxComPort.SelectedIndexChanged += new System.EventHandler(this.comboBoxComPort_SelectedIndexChanged);
             // 
@@ -438,9 +438,9 @@
             this.label16.AutoSize = true;
             this.label16.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label16.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(511, 0);
+            this.label16.Location = new System.Drawing.Point(504, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(104, 25);
+            this.label16.Size = new System.Drawing.Size(102, 25);
             this.label16.TabIndex = 10;
             this.label16.Text = "END BIT";
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -450,9 +450,9 @@
             this.label15.AutoSize = true;
             this.label15.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label15.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(409, 0);
+            this.label15.Location = new System.Drawing.Point(403, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(96, 25);
+            this.label15.Size = new System.Drawing.Size(95, 25);
             this.label15.TabIndex = 9;
             this.label15.Text = "PARITY";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -462,9 +462,9 @@
             this.label14.AutoSize = true;
             this.label14.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label14.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(297, 0);
+            this.label14.Location = new System.Drawing.Point(293, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(106, 25);
+            this.label14.Size = new System.Drawing.Size(104, 25);
             this.label14.TabIndex = 8;
             this.label14.Text = "DATABIT";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -474,9 +474,9 @@
             this.label13.AutoSize = true;
             this.label13.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label13.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(137, 0);
+            this.label13.Location = new System.Drawing.Point(135, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(154, 25);
+            this.label13.Size = new System.Drawing.Size(152, 25);
             this.label13.TabIndex = 7;
             this.label13.Text = "BAUDRATE";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -485,9 +485,9 @@
             // 
             this.comboBoxEndBit.Dock = System.Windows.Forms.DockStyle.Fill;
             this.comboBoxEndBit.FormattingEnabled = true;
-            this.comboBoxEndBit.Location = new System.Drawing.Point(511, 28);
+            this.comboBoxEndBit.Location = new System.Drawing.Point(504, 28);
             this.comboBoxEndBit.Name = "comboBoxEndBit";
-            this.comboBoxEndBit.Size = new System.Drawing.Size(104, 21);
+            this.comboBoxEndBit.Size = new System.Drawing.Size(102, 21);
             this.comboBoxEndBit.TabIndex = 4;
             this.comboBoxEndBit.SelectedIndexChanged += new System.EventHandler(this.comboBoxEndBit_SelectedIndexChanged);
             // 
@@ -495,9 +495,9 @@
             // 
             this.comboBoxParity.Dock = System.Windows.Forms.DockStyle.Fill;
             this.comboBoxParity.FormattingEnabled = true;
-            this.comboBoxParity.Location = new System.Drawing.Point(409, 28);
+            this.comboBoxParity.Location = new System.Drawing.Point(403, 28);
             this.comboBoxParity.Name = "comboBoxParity";
-            this.comboBoxParity.Size = new System.Drawing.Size(96, 21);
+            this.comboBoxParity.Size = new System.Drawing.Size(95, 21);
             this.comboBoxParity.TabIndex = 3;
             this.comboBoxParity.SelectedIndexChanged += new System.EventHandler(this.comboBoxParity_SelectedIndexChanged);
             // 
@@ -505,9 +505,9 @@
             // 
             this.comboBoxDatabit.Dock = System.Windows.Forms.DockStyle.Fill;
             this.comboBoxDatabit.FormattingEnabled = true;
-            this.comboBoxDatabit.Location = new System.Drawing.Point(297, 28);
+            this.comboBoxDatabit.Location = new System.Drawing.Point(293, 28);
             this.comboBoxDatabit.Name = "comboBoxDatabit";
-            this.comboBoxDatabit.Size = new System.Drawing.Size(106, 21);
+            this.comboBoxDatabit.Size = new System.Drawing.Size(104, 21);
             this.comboBoxDatabit.TabIndex = 2;
             this.comboBoxDatabit.SelectedIndexChanged += new System.EventHandler(this.comboBoxDatabit_SelectedIndexChanged);
             // 
@@ -515,9 +515,9 @@
             // 
             this.comboBoxBaudrate.Dock = System.Windows.Forms.DockStyle.Fill;
             this.comboBoxBaudrate.FormattingEnabled = true;
-            this.comboBoxBaudrate.Location = new System.Drawing.Point(137, 28);
+            this.comboBoxBaudrate.Location = new System.Drawing.Point(135, 28);
             this.comboBoxBaudrate.Name = "comboBoxBaudrate";
-            this.comboBoxBaudrate.Size = new System.Drawing.Size(154, 21);
+            this.comboBoxBaudrate.Size = new System.Drawing.Size(152, 21);
             this.comboBoxBaudrate.TabIndex = 1;
             this.comboBoxBaudrate.SelectedIndexChanged += new System.EventHandler(this.comboBoxBaudrate_SelectedIndexChanged);
             // 
@@ -528,7 +528,7 @@
             this.label12.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(3, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(128, 25);
+            this.label12.Size = new System.Drawing.Size(126, 25);
             this.label12.TabIndex = 6;
             this.label12.Text = "COM PORT";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -539,10 +539,10 @@
             this.buttonRefesh.BackgroundImage = global::IT8512A_Power_Test.Properties.Resources.refesh_icon;
             this.buttonRefesh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.buttonRefesh.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonRefesh.Location = new System.Drawing.Point(621, 3);
+            this.buttonRefesh.Location = new System.Drawing.Point(612, 3);
             this.buttonRefesh.Name = "buttonRefesh";
             this.tableLayoutPanel2.SetRowSpan(this.buttonRefesh, 2);
-            this.buttonRefesh.Size = new System.Drawing.Size(46, 45);
+            this.buttonRefesh.Size = new System.Drawing.Size(45, 45);
             this.buttonRefesh.TabIndex = 12;
             this.buttonRefesh.UseVisualStyleBackColor = false;
             this.buttonRefesh.Click += new System.EventHandler(this.buttonRefesh_Click);
@@ -701,7 +701,6 @@
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusConnect;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
-        private System.Windows.Forms.ComboBox comboBoxProductCode;
         private System.Windows.Forms.Label label6;
         public System.Windows.Forms.Label labelVoltageA;
         public System.Windows.Forms.Label labelGetVolB;
@@ -718,6 +717,7 @@
         private System.Windows.Forms.Button buttonRefesh;
         private System.Windows.Forms.Label labelGetVolA;
         private System.Windows.Forms.TextBox rawResponse;
+        public System.Windows.Forms.ComboBox comboBoxProductCode;
     }
 }
 

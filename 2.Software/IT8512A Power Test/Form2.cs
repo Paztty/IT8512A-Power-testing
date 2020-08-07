@@ -19,11 +19,11 @@ namespace IT8512A_Power_Test
             ProductindomationInit();
         }
 
-    
+
         private void comboBoxProductCode_SelectedIndexChanged(object sender, EventArgs e)
         {
-                textBoxMaxVol.Text = comboBoxProductCode.SelectedIndex.ToString();
-                textBoxMinVol.Text = Form1.productsList[comboBoxProductCode.SelectedIndex].AVoltageLowLevel.ToString();       
+            textBoxMaxVol.Text = comboBoxProductCode.SelectedIndex.ToString();
+            textBoxMinVol.Text = Form1.productsList[comboBoxProductCode.SelectedIndex].AVoltageLowLevel.ToString();
         }
         public void ProductindomationInit()
         {
@@ -43,8 +43,14 @@ namespace IT8512A_Power_Test
 
         private void textBoxMaxVol_TextChanged(object sender, EventArgs e)
         {
-            if (textBoxMaxVol.Text != String.Empty)
-                VolA_H = float.Parse(textBoxMaxVol.Text);
+            try
+            {
+                VolA_H = float.Parse(textBoxMaxVol.Text, System.Globalization.NumberStyles.Float);
+            }
+            catch (Exception String)
+            {
+                MessageBox.Show(String.Message);
+            }
         }
 
         private void buttonOK_Click(object sender, EventArgs e)
@@ -55,8 +61,16 @@ namespace IT8512A_Power_Test
 
         private void textBoxMinVol_TextChanged(object sender, EventArgs e)
         {
-            if(textBoxMinVol.Text != String.Empty)
-                VolA_L = float.Parse(textBoxMinVol.Text);
+            if (textBoxMinVol.Text != String.Empty)
+                try
+                {
+                    VolA_L = float.Parse(textBoxMinVol.Text, System.Globalization.NumberStyles.Float);
+                }
+                catch (Exception String)
+                {
+                    MessageBox.Show(String.Message);
+                }
+
         }
 
         private void buttonCancel_Click(object sender, EventArgs e)
@@ -86,7 +100,12 @@ namespace IT8512A_Power_Test
             {
                 MessageBox.Show("Giá trị không phù hợp");
             }
-                
+
         }
+        private void Form2_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            Form1.form2Close = true;
+        }
+
     }
 }
