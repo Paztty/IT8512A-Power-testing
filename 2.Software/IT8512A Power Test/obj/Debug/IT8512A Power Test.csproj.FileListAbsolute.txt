@@ -9,3 +9,28 @@ D:\DEV\3. DEV Projects\6. IT8512 test machine\2.Software\IT8512A Power Test\obj\
 D:\DEV\3. DEV Projects\6. IT8512 test machine\2.Software\IT8512A Power Test\obj\Debug\IT8512A Power Test.exe
 D:\DEV\3. DEV Projects\6. IT8512 test machine\2.Software\IT8512A Power Test\obj\Debug\IT8512A Power Test.pdb
 D:\DEV\3. DEV Projects\6. IT8512 test machine\2.Software\IT8512A Power Test\obj\Debug\IT8512A_Power_Test.Form2.resources
+D:\DEV\3. DEV Projects\6. IT8512 test machine\2.Software\IT8512A Power Test\bin\Debug\ZedGraph.dll
+D:\DEV\3. DEV Projects\6. IT8512 test machine\2.Software\IT8512A Power Test\bin\Debug\ZedGraph.xml
+D:\DEV\3. DEV Projects\6. IT8512 test machine\2.Software\IT8512A Power Test\bin\Debug\de\ZedGraph.resources.dll
+D:\DEV\3. DEV Projects\6. IT8512 test machine\2.Software\IT8512A Power Test\bin\Debug\es\ZedGraph.resources.dll
+D:\DEV\3. DEV Projects\6. IT8512 test machine\2.Software\IT8512A Power Test\bin\Debug\fr\ZedGraph.resources.dll
+D:\DEV\3. DEV Projects\6. IT8512 test machine\2.Software\IT8512A Power Test\bin\Debug\hu\ZedGraph.resources.dll
+D:\DEV\3. DEV Projects\6. IT8512 test machine\2.Software\IT8512A Power Test\bin\Debug\it\ZedGraph.resources.dll
+D:\DEV\3. DEV Projects\6. IT8512 test machine\2.Software\IT8512A Power Test\bin\Debug\ja\ZedGraph.resources.dll
+D:\DEV\3. DEV Projects\6. IT8512 test machine\2.Software\IT8512A Power Test\bin\Debug\pt\ZedGraph.resources.dll
+D:\DEV\3. DEV Projects\6. IT8512 test machine\2.Software\IT8512A Power Test\bin\Debug\ru\ZedGraph.resources.dll
+D:\DEV\3. DEV Projects\6. IT8512 test machine\2.Software\IT8512A Power Test\bin\Debug\sk\ZedGraph.resources.dll
+D:\DEV\3. DEV Projects\6. IT8512 test machine\2.Software\IT8512A Power Test\bin\Debug\sv\ZedGraph.resources.dll
+D:\DEV\3. DEV Projects\6. IT8512 test machine\2.Software\IT8512A Power Test\bin\Debug\tr\ZedGraph.resources.dll
+D:\DEV\3. DEV Projects\6. IT8512 test machine\2.Software\IT8512A Power Test\bin\Debug\zh-cn\ZedGraph.resources.dll
+D:\DEV\3. DEV Projects\6. IT8512 test machine\2.Software\IT8512A Power Test\bin\Debug\zh-tw\ZedGraph.resources.dll
+D:\DEV\3. DEV Projects\6. IT8512 test machine\2.Software\IT8512A Power Test\obj\Debug\IT8512A Power Test.csproj.CopyComplete
+D:\DEV\3. DEV Projects\6. IT8512 test machine\2.Software\IT8512A Power Test\bin\Debug\LiveCharts.dll
+D:\DEV\3. DEV Projects\6. IT8512 test machine\2.Software\IT8512A Power Test\bin\Debug\LiveCharts.pdb
+D:\DEV\3. DEV Projects\6. IT8512 test machine\2.Software\IT8512A Power Test\bin\Debug\LiveCharts.xml
+D:\DEV\3. DEV Projects\6. IT8512 test machine\2.Software\IT8512A Power Test\bin\Debug\LiveCharts.WinForms.dll
+D:\DEV\3. DEV Projects\6. IT8512 test machine\2.Software\IT8512A Power Test\bin\Debug\LiveCharts.Wpf.dll
+D:\DEV\3. DEV Projects\6. IT8512 test machine\2.Software\IT8512A Power Test\bin\Debug\LiveCharts.WinForms.pdb
+D:\DEV\3. DEV Projects\6. IT8512 test machine\2.Software\IT8512A Power Test\bin\Debug\LiveCharts.WinForms.xml
+D:\DEV\3. DEV Projects\6. IT8512 test machine\2.Software\IT8512A Power Test\bin\Debug\LiveCharts.Wpf.pdb
+D:\DEV\3. DEV Projects\6. IT8512 test machine\2.Software\IT8512A Power Test\bin\Debug\LiveCharts.Wpf.xml

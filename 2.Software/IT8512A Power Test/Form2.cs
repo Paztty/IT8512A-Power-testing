@@ -22,7 +22,7 @@ namespace IT8512A_Power_Test
 
         private void comboBoxProductCode_SelectedIndexChanged(object sender, EventArgs e)
         {
-            textBoxMaxVol.Text = comboBoxProductCode.SelectedIndex.ToString();
+            textBoxMaxVol.Text = Form1.productsList[comboBoxProductCode.SelectedIndex].AVoltageLowLevel.ToString();
             textBoxMinVol.Text = Form1.productsList[comboBoxProductCode.SelectedIndex].AVoltageLowLevel.ToString();
         }
         public void ProductindomationInit()
@@ -57,6 +57,7 @@ namespace IT8512A_Power_Test
         {
             buttonApply_Click(sender, e);
             this.Close();
+            //Form1_Load(sender, e);
         }
 
         private void textBoxMinVol_TextChanged(object sender, EventArgs e)

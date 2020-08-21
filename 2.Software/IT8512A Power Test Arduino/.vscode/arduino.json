@@ -1,0 +1,5 @@
+{
+    "board": "arduino:avr:uno",
+    "port": "COM8",
+    "sketch": "IT8512A_Power_Test.ino"
+}
