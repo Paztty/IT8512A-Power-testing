@@ -74,7 +74,6 @@
             this.Port = new System.IO.Ports.SerialPort(this.components);
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusConnect = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusDataRecive = new System.Windows.Forms.ToolStripStatusLabel();
             this.serialPortStatus = new System.Windows.Forms.ToolStripStatusLabel();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
@@ -84,8 +83,14 @@
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.daillyReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.weedReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.moToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.importToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.oPToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.teToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.optionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.settingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modelSettingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -121,7 +126,7 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1107, 411);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1130, 413);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // tableLayoutPanel3
@@ -155,7 +160,7 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 18.00327F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 21.54937F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40.37098F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(809, 405);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(826, 407);
             this.tableLayoutPanel3.TabIndex = 2;
             // 
             // labelResultB
@@ -166,9 +171,9 @@
             this.labelResultB.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelResultB.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelResultB.ForeColor = System.Drawing.Color.Red;
-            this.labelResultB.Location = new System.Drawing.Point(471, 152);
+            this.labelResultB.Location = new System.Drawing.Point(481, 153);
             this.labelResultB.Name = "labelResultB";
-            this.labelResultB.Size = new System.Drawing.Size(335, 87);
+            this.labelResultB.Size = new System.Drawing.Size(342, 87);
             this.labelResultB.TabIndex = 11;
             this.labelResultB.Text = "NG";
             this.labelResultB.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -181,9 +186,9 @@
             this.labelResultA.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelResultA.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelResultA.ForeColor = System.Drawing.Color.Lime;
-            this.labelResultA.Location = new System.Drawing.Point(132, 152);
+            this.labelResultA.Location = new System.Drawing.Point(135, 153);
             this.labelResultA.Name = "labelResultA";
-            this.labelResultA.Size = new System.Drawing.Size(333, 87);
+            this.labelResultA.Size = new System.Drawing.Size(340, 87);
             this.labelResultA.TabIndex = 10;
             this.labelResultA.Text = "OK";
             this.labelResultA.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -194,9 +199,9 @@
             this.label11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(3, 152);
+            this.label11.Location = new System.Drawing.Point(3, 153);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(123, 87);
+            this.label11.Size = new System.Drawing.Size(126, 87);
             this.label11.TabIndex = 9;
             this.label11.Text = "RESULT";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -208,9 +213,9 @@
             this.labelGetVolB.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelGetVolB.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelGetVolB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.labelGetVolB.Location = new System.Drawing.Point(471, 80);
+            this.labelGetVolB.Location = new System.Drawing.Point(481, 80);
             this.labelGetVolB.Name = "labelGetVolB";
-            this.labelGetVolB.Size = new System.Drawing.Size(335, 72);
+            this.labelGetVolB.Size = new System.Drawing.Size(342, 73);
             this.labelGetVolB.TabIndex = 8;
             this.labelGetVolB.Text = "GET";
             this.labelGetVolB.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -222,9 +227,9 @@
             this.labelGetVolA.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelGetVolA.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelGetVolA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.labelGetVolA.Location = new System.Drawing.Point(132, 80);
+            this.labelGetVolA.Location = new System.Drawing.Point(135, 80);
             this.labelGetVolA.Name = "labelGetVolA";
-            this.labelGetVolA.Size = new System.Drawing.Size(333, 72);
+            this.labelGetVolA.Size = new System.Drawing.Size(340, 73);
             this.labelGetVolA.TabIndex = 7;
             this.labelGetVolA.Text = "GET";
             this.labelGetVolA.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -238,7 +243,7 @@
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.label8.Location = new System.Drawing.Point(3, 80);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(123, 72);
+            this.label8.Size = new System.Drawing.Size(126, 73);
             this.label8.TabIndex = 6;
             this.label8.Text = "GET";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -250,9 +255,9 @@
             this.labelVoltageB.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelVoltageB.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelVoltageB.ForeColor = System.Drawing.Color.Green;
-            this.labelVoltageB.Location = new System.Drawing.Point(471, 40);
+            this.labelVoltageB.Location = new System.Drawing.Point(481, 40);
             this.labelVoltageB.Name = "labelVoltageB";
-            this.labelVoltageB.Size = new System.Drawing.Size(335, 40);
+            this.labelVoltageB.Size = new System.Drawing.Size(342, 40);
             this.labelVoltageB.TabIndex = 5;
             this.labelVoltageB.Text = "SLOT";
             this.labelVoltageB.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -264,9 +269,9 @@
             this.labelVoltageA.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelVoltageA.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelVoltageA.ForeColor = System.Drawing.Color.Green;
-            this.labelVoltageA.Location = new System.Drawing.Point(132, 40);
+            this.labelVoltageA.Location = new System.Drawing.Point(135, 40);
             this.labelVoltageA.Name = "labelVoltageA";
-            this.labelVoltageA.Size = new System.Drawing.Size(333, 40);
+            this.labelVoltageA.Size = new System.Drawing.Size(340, 40);
             this.labelVoltageA.TabIndex = 4;
             this.labelVoltageA.Text = "SLOT";
             this.labelVoltageA.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -280,7 +285,7 @@
             this.label4.ForeColor = System.Drawing.Color.Green;
             this.label4.Location = new System.Drawing.Point(3, 40);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(123, 40);
+            this.label4.Size = new System.Drawing.Size(126, 40);
             this.label4.TabIndex = 3;
             this.label4.Text = "SET";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -292,9 +297,9 @@
             this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(132, 0);
+            this.label2.Location = new System.Drawing.Point(135, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(333, 40);
+            this.label2.Size = new System.Drawing.Size(340, 40);
             this.label2.TabIndex = 1;
             this.label2.Text = "A";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -307,7 +312,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(123, 40);
+            this.label1.Size = new System.Drawing.Size(126, 40);
             this.label1.TabIndex = 0;
             this.label1.Text = "SLOT";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -318,9 +323,9 @@
             this.label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(471, 0);
+            this.label3.Location = new System.Drawing.Point(481, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(335, 40);
+            this.label3.Size = new System.Drawing.Size(342, 40);
             this.label3.TabIndex = 2;
             this.label3.Text = "B";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -331,9 +336,9 @@
             this.tableLayoutPanel3.SetColumnSpan(this.labelfinalTestResult, 3);
             this.labelfinalTestResult.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelfinalTestResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelfinalTestResult.Location = new System.Drawing.Point(3, 239);
+            this.labelfinalTestResult.Location = new System.Drawing.Point(3, 240);
             this.labelfinalTestResult.Name = "labelfinalTestResult";
-            this.labelfinalTestResult.Size = new System.Drawing.Size(803, 166);
+            this.labelfinalTestResult.Size = new System.Drawing.Size(820, 167);
             this.labelfinalTestResult.TabIndex = 12;
             this.labelfinalTestResult.Text = "OK";
             this.labelfinalTestResult.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -347,22 +352,22 @@
             this.tableLayoutPanel4.Controls.Add(this.tableLayoutPanel6, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.pictureBox1, 0, 1);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(818, 3);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(835, 3);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 3;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 55.78035F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 44.21965F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 77F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(286, 405);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(292, 407);
             this.tableLayoutPanel4.TabIndex = 3;
             // 
             // rawResponse
             // 
             this.rawResponse.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rawResponse.Location = new System.Drawing.Point(3, 330);
+            this.rawResponse.Location = new System.Drawing.Point(3, 332);
             this.rawResponse.Multiline = true;
             this.rawResponse.Name = "rawResponse";
-            this.rawResponse.Size = new System.Drawing.Size(280, 72);
+            this.rawResponse.Size = new System.Drawing.Size(286, 72);
             this.rawResponse.TabIndex = 2;
             // 
             // tableLayoutPanel6
@@ -377,7 +382,7 @@
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 1;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(280, 176);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(286, 178);
             this.tableLayoutPanel6.TabIndex = 3;
             // 
             // pictureBox
@@ -385,7 +390,7 @@
             this.pictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox.Location = new System.Drawing.Point(3, 3);
             this.pictureBox.Name = "pictureBox";
-            this.pictureBox.Size = new System.Drawing.Size(137, 170);
+            this.pictureBox.Size = new System.Drawing.Size(140, 172);
             this.pictureBox.TabIndex = 0;
             this.pictureBox.TabStop = false;
             // 
@@ -401,13 +406,13 @@
             this.tableLayoutPanel7.Controls.Add(this.label7, 0, 1);
             this.tableLayoutPanel7.Controls.Add(this.label9, 0, 2);
             this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel7.Location = new System.Drawing.Point(146, 3);
+            this.tableLayoutPanel7.Location = new System.Drawing.Point(149, 3);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
             this.tableLayoutPanel7.RowCount = 3;
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(131, 170);
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(134, 172);
             this.tableLayoutPanel7.TabIndex = 1;
             // 
             // labelStatisticsTotal
@@ -415,9 +420,9 @@
             this.labelStatisticsTotal.AutoSize = true;
             this.labelStatisticsTotal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelStatisticsTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelStatisticsTotal.Location = new System.Drawing.Point(68, 112);
+            this.labelStatisticsTotal.Location = new System.Drawing.Point(68, 114);
             this.labelStatisticsTotal.Name = "labelStatisticsTotal";
-            this.labelStatisticsTotal.Size = new System.Drawing.Size(60, 58);
+            this.labelStatisticsTotal.Size = new System.Drawing.Size(63, 58);
             this.labelStatisticsTotal.TabIndex = 5;
             this.labelStatisticsTotal.Text = "0";
             this.labelStatisticsTotal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -427,9 +432,9 @@
             this.labelStatisticNG.AutoSize = true;
             this.labelStatisticNG.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelStatisticNG.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelStatisticNG.Location = new System.Drawing.Point(68, 56);
+            this.labelStatisticNG.Location = new System.Drawing.Point(68, 57);
             this.labelStatisticNG.Name = "labelStatisticNG";
-            this.labelStatisticNG.Size = new System.Drawing.Size(60, 56);
+            this.labelStatisticNG.Size = new System.Drawing.Size(63, 57);
             this.labelStatisticNG.TabIndex = 4;
             this.labelStatisticNG.Text = "0";
             this.labelStatisticNG.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -441,7 +446,7 @@
             this.labelStatisticOK.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelStatisticOK.Location = new System.Drawing.Point(68, 0);
             this.labelStatisticOK.Name = "labelStatisticOK";
-            this.labelStatisticOK.Size = new System.Drawing.Size(60, 56);
+            this.labelStatisticOK.Size = new System.Drawing.Size(63, 57);
             this.labelStatisticOK.TabIndex = 3;
             this.labelStatisticOK.Text = "0";
             this.labelStatisticOK.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -453,7 +458,7 @@
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(3, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(59, 56);
+            this.label5.Size = new System.Drawing.Size(59, 57);
             this.label5.TabIndex = 0;
             this.label5.Text = "OK";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -463,9 +468,9 @@
             this.label7.AutoSize = true;
             this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(3, 56);
+            this.label7.Location = new System.Drawing.Point(3, 57);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(59, 56);
+            this.label7.Size = new System.Drawing.Size(59, 57);
             this.label7.TabIndex = 1;
             this.label7.Text = "NG";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -475,7 +480,7 @@
             this.label9.AutoSize = true;
             this.label9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(3, 112);
+            this.label9.Location = new System.Drawing.Point(3, 114);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(59, 58);
             this.label9.TabIndex = 2;
@@ -488,9 +493,9 @@
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.No;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.InitialImage = global::IT8512A_Power_Test.Properties.Resources.DJ96_00222;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 185);
+            this.pictureBox1.Location = new System.Drawing.Point(3, 187);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(280, 139);
+            this.pictureBox1.Size = new System.Drawing.Size(286, 139);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
@@ -523,12 +528,12 @@
             this.tableLayoutPanel2.Controls.Add(this.buttonRefesh, 5, 0);
             this.tableLayoutPanel2.Controls.Add(this.button1, 7, 0);
             this.tableLayoutPanel2.ForeColor = System.Drawing.Color.Black;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(12, 486);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(12, 488);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1107, 51);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1130, 51);
             this.tableLayoutPanel2.TabIndex = 2;
             // 
             // buttonSerialConnect
@@ -537,10 +542,10 @@
             this.buttonSerialConnect.Dock = System.Windows.Forms.DockStyle.Fill;
             this.buttonSerialConnect.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSerialConnect.ForeColor = System.Drawing.Color.Red;
-            this.buttonSerialConnect.Location = new System.Drawing.Point(785, 3);
+            this.buttonSerialConnect.Location = new System.Drawing.Point(801, 3);
             this.buttonSerialConnect.Name = "buttonSerialConnect";
             this.tableLayoutPanel2.SetRowSpan(this.buttonSerialConnect, 2);
-            this.buttonSerialConnect.Size = new System.Drawing.Size(114, 45);
+            this.buttonSerialConnect.Size = new System.Drawing.Size(117, 45);
             this.buttonSerialConnect.TabIndex = 13;
             this.buttonSerialConnect.Text = "OPEN";
             this.buttonSerialConnect.UseVisualStyleBackColor = false;
@@ -552,7 +557,7 @@
             this.comboBoxComPort.FormattingEnabled = true;
             this.comboBoxComPort.Location = new System.Drawing.Point(3, 28);
             this.comboBoxComPort.Name = "comboBoxComPort";
-            this.comboBoxComPort.Size = new System.Drawing.Size(195, 21);
+            this.comboBoxComPort.Size = new System.Drawing.Size(199, 21);
             this.comboBoxComPort.TabIndex = 11;
             this.comboBoxComPort.SelectedIndexChanged += new System.EventHandler(this.comboBoxComPort_SelectedIndexChanged);
             // 
@@ -561,9 +566,9 @@
             this.label16.AutoSize = true;
             this.label16.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label16.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(605, 0);
+            this.label16.Location = new System.Drawing.Point(617, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(94, 25);
+            this.label16.Size = new System.Drawing.Size(96, 25);
             this.label16.TabIndex = 10;
             this.label16.Text = "END BIT";
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -573,9 +578,9 @@
             this.label15.AutoSize = true;
             this.label15.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label15.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(505, 0);
+            this.label15.Location = new System.Drawing.Point(515, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(94, 25);
+            this.label15.Size = new System.Drawing.Size(96, 25);
             this.label15.TabIndex = 9;
             this.label15.Text = "PARITY";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -585,9 +590,9 @@
             this.label14.AutoSize = true;
             this.label14.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label14.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(405, 0);
+            this.label14.Location = new System.Drawing.Point(413, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(94, 25);
+            this.label14.Size = new System.Drawing.Size(96, 25);
             this.label14.TabIndex = 8;
             this.label14.Text = "DATABIT";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -597,9 +602,9 @@
             this.label13.AutoSize = true;
             this.label13.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label13.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(204, 0);
+            this.label13.Location = new System.Drawing.Point(208, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(195, 25);
+            this.label13.Size = new System.Drawing.Size(199, 25);
             this.label13.TabIndex = 7;
             this.label13.Text = "BAUDRATE";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -608,9 +613,9 @@
             // 
             this.comboBoxEndBit.Dock = System.Windows.Forms.DockStyle.Fill;
             this.comboBoxEndBit.FormattingEnabled = true;
-            this.comboBoxEndBit.Location = new System.Drawing.Point(605, 28);
+            this.comboBoxEndBit.Location = new System.Drawing.Point(617, 28);
             this.comboBoxEndBit.Name = "comboBoxEndBit";
-            this.comboBoxEndBit.Size = new System.Drawing.Size(94, 21);
+            this.comboBoxEndBit.Size = new System.Drawing.Size(96, 21);
             this.comboBoxEndBit.TabIndex = 4;
             this.comboBoxEndBit.SelectedIndexChanged += new System.EventHandler(this.comboBoxEndBit_SelectedIndexChanged);
             // 
@@ -618,9 +623,9 @@
             // 
             this.comboBoxParity.Dock = System.Windows.Forms.DockStyle.Fill;
             this.comboBoxParity.FormattingEnabled = true;
-            this.comboBoxParity.Location = new System.Drawing.Point(505, 28);
+            this.comboBoxParity.Location = new System.Drawing.Point(515, 28);
             this.comboBoxParity.Name = "comboBoxParity";
-            this.comboBoxParity.Size = new System.Drawing.Size(94, 21);
+            this.comboBoxParity.Size = new System.Drawing.Size(96, 21);
             this.comboBoxParity.TabIndex = 3;
             this.comboBoxParity.SelectedIndexChanged += new System.EventHandler(this.comboBoxParity_SelectedIndexChanged);
             // 
@@ -628,9 +633,9 @@
             // 
             this.comboBoxDatabit.Dock = System.Windows.Forms.DockStyle.Fill;
             this.comboBoxDatabit.FormattingEnabled = true;
-            this.comboBoxDatabit.Location = new System.Drawing.Point(405, 28);
+            this.comboBoxDatabit.Location = new System.Drawing.Point(413, 28);
             this.comboBoxDatabit.Name = "comboBoxDatabit";
-            this.comboBoxDatabit.Size = new System.Drawing.Size(94, 21);
+            this.comboBoxDatabit.Size = new System.Drawing.Size(96, 21);
             this.comboBoxDatabit.TabIndex = 2;
             this.comboBoxDatabit.SelectedIndexChanged += new System.EventHandler(this.comboBoxDatabit_SelectedIndexChanged);
             // 
@@ -638,9 +643,9 @@
             // 
             this.comboBoxBaudrate.Dock = System.Windows.Forms.DockStyle.Fill;
             this.comboBoxBaudrate.FormattingEnabled = true;
-            this.comboBoxBaudrate.Location = new System.Drawing.Point(204, 28);
+            this.comboBoxBaudrate.Location = new System.Drawing.Point(208, 28);
             this.comboBoxBaudrate.Name = "comboBoxBaudrate";
-            this.comboBoxBaudrate.Size = new System.Drawing.Size(195, 21);
+            this.comboBoxBaudrate.Size = new System.Drawing.Size(199, 21);
             this.comboBoxBaudrate.TabIndex = 1;
             this.comboBoxBaudrate.SelectedIndexChanged += new System.EventHandler(this.comboBoxBaudrate_SelectedIndexChanged);
             // 
@@ -651,7 +656,7 @@
             this.label12.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(3, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(195, 25);
+            this.label12.Size = new System.Drawing.Size(199, 25);
             this.label12.TabIndex = 6;
             this.label12.Text = "COM PORT";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -662,7 +667,7 @@
             this.buttonRefesh.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.buttonRefesh.BackgroundImage = global::IT8512A_Power_Test.Properties.Resources.refesh_icon;
             this.buttonRefesh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.buttonRefesh.Location = new System.Drawing.Point(705, 3);
+            this.buttonRefesh.Location = new System.Drawing.Point(719, 3);
             this.buttonRefesh.Name = "buttonRefesh";
             this.tableLayoutPanel2.SetRowSpan(this.buttonRefesh, 2);
             this.buttonRefesh.Size = new System.Drawing.Size(45, 45);
@@ -676,10 +681,10 @@
             this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Maroon;
-            this.button1.Location = new System.Drawing.Point(905, 3);
+            this.button1.Location = new System.Drawing.Point(924, 3);
             this.button1.Name = "button1";
             this.tableLayoutPanel2.SetRowSpan(this.button1, 2);
-            this.button1.Size = new System.Drawing.Size(199, 45);
+            this.button1.Size = new System.Drawing.Size(203, 45);
             this.button1.TabIndex = 14;
             this.button1.Text = "CONNECT";
             this.button1.UseVisualStyleBackColor = false;
@@ -689,12 +694,11 @@
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusConnect,
-            this.toolStripStatusLabel2,
             this.toolStripStatusDataRecive,
             this.serialPortStatus});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 545);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 547);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1131, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(1154, 22);
             this.statusStrip1.TabIndex = 3;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -703,12 +707,6 @@
             this.toolStripStatusConnect.Name = "toolStripStatusConnect";
             this.toolStripStatusConnect.Size = new System.Drawing.Size(89, 17);
             this.toolStripStatusConnect.Text = "ITA8512A status";
-            // 
-            // toolStripStatusLabel2
-            // 
-            this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
-            this.toolStripStatusLabel2.Size = new System.Drawing.Size(74, 17);
-            this.toolStripStatusLabel2.Text = "Data Recive: ";
             // 
             // toolStripStatusDataRecive
             // 
@@ -728,7 +726,7 @@
             this.tableLayoutPanel5.ColumnCount = 3;
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 369F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 370F));
             this.tableLayoutPanel5.Controls.Add(this.comboBoxProductCode, 1, 0);
             this.tableLayoutPanel5.Controls.Add(this.label6, 0, 0);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Top;
@@ -736,7 +734,7 @@
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(1131, 49);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(1154, 49);
             this.tableLayoutPanel5.TabIndex = 4;
             // 
             // comboBoxProductCode
@@ -744,9 +742,9 @@
             this.comboBoxProductCode.Dock = System.Windows.Forms.DockStyle.Fill;
             this.comboBoxProductCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxProductCode.FormattingEnabled = true;
-            this.comboBoxProductCode.Location = new System.Drawing.Point(384, 3);
+            this.comboBoxProductCode.Location = new System.Drawing.Point(395, 3);
             this.comboBoxProductCode.Name = "comboBoxProductCode";
-            this.comboBoxProductCode.Size = new System.Drawing.Size(375, 39);
+            this.comboBoxProductCode.Size = new System.Drawing.Size(386, 39);
             this.comboBoxProductCode.TabIndex = 0;
             this.comboBoxProductCode.SelectedIndexChanged += new System.EventHandler(this.comboBoxProductCode_SelectedIndexChanged);
             // 
@@ -757,7 +755,7 @@
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(3, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(375, 49);
+            this.label6.Size = new System.Drawing.Size(386, 49);
             this.label6.TabIndex = 1;
             this.label6.Text = "Model";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -778,34 +776,80 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.loginToolStripMenuItem,
-            this.editToolStripMenuItem,
             this.optionToolStripMenuItem,
             this.settingToolStripMenuItem,
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1131, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1154, 24);
             this.menuStrip1.TabIndex = 5;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // fileToolStripMenuItem
             // 
+            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.exportToolStripMenuItem,
+            this.importToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem.Text = "File";
             // 
+            // exportToolStripMenuItem
+            // 
+            this.exportToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.daillyReportToolStripMenuItem,
+            this.weedReportToolStripMenuItem,
+            this.moToolStripMenuItem});
+            this.exportToolStripMenuItem.Name = "exportToolStripMenuItem";
+            this.exportToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
+            this.exportToolStripMenuItem.Text = "Export";
+            // 
+            // daillyReportToolStripMenuItem
+            // 
+            this.daillyReportToolStripMenuItem.Name = "daillyReportToolStripMenuItem";
+            this.daillyReportToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.daillyReportToolStripMenuItem.Text = "Dailly Report";
+            // 
+            // weedReportToolStripMenuItem
+            // 
+            this.weedReportToolStripMenuItem.Name = "weedReportToolStripMenuItem";
+            this.weedReportToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.weedReportToolStripMenuItem.Text = "Weed Report";
+            // 
+            // moToolStripMenuItem
+            // 
+            this.moToolStripMenuItem.Name = "moToolStripMenuItem";
+            this.moToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.moToolStripMenuItem.Text = "Monthly Report";
+            // 
+            // importToolStripMenuItem
+            // 
+            this.importToolStripMenuItem.Name = "importToolStripMenuItem";
+            this.importToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
+            this.importToolStripMenuItem.Text = "Import";
+            // 
             // loginToolStripMenuItem
             // 
+            this.loginToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.oPToolStripMenuItem,
+            this.teToolStripMenuItem});
             this.loginToolStripMenuItem.Name = "loginToolStripMenuItem";
             this.loginToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
             this.loginToolStripMenuItem.Text = "Login";
             this.loginToolStripMenuItem.Click += new System.EventHandler(this.loginToolStripMenuItem_Click);
             // 
-            // editToolStripMenuItem
+            // oPToolStripMenuItem
             // 
-            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
-            this.editToolStripMenuItem.Text = "Edit";
+            this.oPToolStripMenuItem.Name = "oPToolStripMenuItem";
+            this.oPToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.oPToolStripMenuItem.Text = "OP (default)";
+            // 
+            // teToolStripMenuItem
+            // 
+            this.teToolStripMenuItem.Name = "teToolStripMenuItem";
+            this.teToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.teToolStripMenuItem.Text = "Technical";
+            this.teToolStripMenuItem.Click += new System.EventHandler(this.teToolStripMenuItem_Click);
             // 
             // optionToolStripMenuItem
             // 
@@ -825,15 +869,16 @@
             // modelSettingToolStripMenuItem
             // 
             this.modelSettingToolStripMenuItem.Name = "modelSettingToolStripMenuItem";
-            this.modelSettingToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.modelSettingToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
             this.modelSettingToolStripMenuItem.Text = "Model setting";
             this.modelSettingToolStripMenuItem.Click += new System.EventHandler(this.modelSettingToolStripMenuItem_Click);
             // 
             // comPortSettingToolStripMenuItem
             // 
             this.comPortSettingToolStripMenuItem.Name = "comPortSettingToolStripMenuItem";
-            this.comPortSettingToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.comPortSettingToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
             this.comPortSettingToolStripMenuItem.Text = "Com port setting";
+            this.comPortSettingToolStripMenuItem.Click += new System.EventHandler(this.comPortSettingToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
@@ -860,7 +905,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1131, 567);
+            this.ClientSize = new System.Drawing.Size(1154, 569);
             this.Controls.Add(this.tableLayoutPanel5);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
@@ -916,7 +961,6 @@
         private System.IO.Ports.SerialPort Port;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusConnect;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private System.Windows.Forms.Label label6;
         public System.Windows.Forms.Label labelVoltageA;
@@ -950,7 +994,6 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem loginToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem optionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem settingToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
@@ -958,6 +1001,13 @@
         private System.Windows.Forms.ToolStripMenuItem aboutIT8512APowerTestToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem modelSettingToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem comPortSettingToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exportToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem daillyReportToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem weedReportToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem moToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem oPToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem teToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem importToolStripMenuItem;
     }
 }
 

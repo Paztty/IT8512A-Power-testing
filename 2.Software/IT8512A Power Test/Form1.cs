@@ -488,13 +488,17 @@ namespace IT8512A_Power_Test
         private void modelSettingToolStripMenuItem_Click(object sender, EventArgs e)
         {
             form2Close = false;
-            new Form2().Show();
+            new Form2().ShowDialog();
         }
 
-        private void buttonSetting_Click(object sender, EventArgs e)
+        private void teToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            form2Close = false;
-            new Form2().Show();
+            new Form3().ShowDialog();
+        }
+
+        private void comPortSettingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -521,7 +525,7 @@ namespace IT8512A_Power_Test
             labelStatisticNG.Text = ngNumber.ToString();
             labelStatisticOK.Text = okNumber.ToString();
             labelStatisticsTotal.Text = Total.ToString();
-            
+
             if (Total == 0) Total = 10000000;
             float okRadian = (float)360.0 / Total * okNumber;
             float ngRadian = (float)360.0 - okRadian;
@@ -542,15 +546,20 @@ namespace IT8512A_Power_Test
                 startRectX = 0;
                 rectDimemtions = pictureBox.Size.Width;
             }
-            
+
             Rectangle rect = new Rectangle(startRectX, startRectY, rectDimemtions, rectDimemtions);
             Bitmap custormChart = new Bitmap(pictureBox.Size.Width, pictureBox.Size.Height);
             Graphics g = Graphics.FromImage(custormChart);
 
             //g.FillEllipse(Brushes.Red, pictureBox.Size.Width / 2 - pictureBox.Size.Height / 2, pictureBox.Size.Height / 2 - pictureBox.Size.Height / 2, pictureBox.Size.Height , pictureBox.Size.Height);
-            g.FillPie(Brushes.Lime, rect , 0 , okRadian);
-            g.FillPie(Brushes.Red, rect, okRadian , ngRadian);
+            g.FillPie(Brushes.Lime, rect, 0, okRadian);
+            g.FillPie(Brushes.Red, rect, okRadian, ngRadian);
             //g.FillEllipse(Brushes.White, pictureBox.Size.Width / 2 - pictureBox.Size.Height / 2 + 10, pictureBox.Size.Height / 2 - pictureBox.Size.Height / 2 + 10, pictureBox.Size.Height - 20, pictureBox.Size.Height - 20);
+            if (pictureBox.Image != null)
+            {
+                pictureBox.Image.Dispose();
+            }
+                 
             pictureBox.Image = custormChart;
         }
 
