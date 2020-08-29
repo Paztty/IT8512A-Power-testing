@@ -13,10 +13,10 @@ using System.IO.Ports;
 using System.Threading;
 
 using System.Drawing.Design;
-using System.Drawing.Drawing2D;//Cung cap cac doi tuong ve vector 2 chieu
-using System.Drawing.Imaging;//Thao tac vs hinh anh
-using System.Drawing.Printing;//Thuc hien in, cac tac vu in an
-using System.Drawing.Text;//Thuc hien ve voi Font
+using System.Drawing.Drawing2D; //Cung cap cac doi tuong ve vector 2 chieu
+using System.Drawing.Imaging;   //Thao tac vs hinh anh
+using System.Drawing.Printing;  //Thuc hien in, cac tac vu in an
+using System.Drawing.Text;      //Thuc hien ve voi Font
 
 
 
@@ -27,8 +27,6 @@ namespace IT8512A_Power_Test
         public Form1()
         {
             InitializeComponent();
-            Serial_UI_init();
-            ProductindomationInit();
             Port.DataReceived += new SerialDataReceivedEventHandler(DataReceive);
             timer1.Start();
 
@@ -42,7 +40,27 @@ namespace IT8512A_Power_Test
             {
                 ComponentInitted = true;
             }
-            DrawChart(1,1);
+
+            // Serial_UI_init();
+            ProductindomationInit();
+            DrawChart(0, 0); 
+
+            if (Permission == "Technical")
+            {
+                settingToolStripMenuItem.Enabled = true;
+                comboBoxBaudrate.Enabled = true;
+                comboBoxDatabit.Enabled = true;
+                comboBoxEndBit.Enabled = true;
+                comboBoxParity.Enabled = true;
+            }
+            else if (Permission == "OP")
+            {
+                settingToolStripMenuItem.Enabled = false;
+                comboBoxBaudrate.Enabled = false;
+                comboBoxDatabit.Enabled = false;
+                comboBoxEndBit.Enabled = false;
+                comboBoxParity.Enabled = false;
+            }
         }
         // End Form load function
 
@@ -66,8 +84,10 @@ namespace IT8512A_Power_Test
         public static bool form2Close;
         public string chanel = "chanelA";
 
-        public int Statistics_OK = 1, Statistics_NG = 1;
+        public int Statistics_OK = 0, Statistics_NG = 0;
         public bool chanelAcherked, chanelBcherked, waitResponse = false, retryTest;
+
+        private String Permission = "OP";
 
         // end check var
 
@@ -118,7 +138,7 @@ namespace IT8512A_Power_Test
             Port.Parity = Parity.None;
             Port.StopBits = StopBits.One;
             Port.BaudRate = Convert.ToInt32(comboBoxBaudrate.Text);
-           
+
             Console.Write("Begin");
         }
         // Sellect com port
@@ -129,7 +149,7 @@ namespace IT8512A_Power_Test
                 Port.PortName = comboBoxComPort.Text;
             }
             catch { }
-            
+
         }
         //Sellect baudrate
         private void comboBoxBaudrate_SelectedIndexChanged(object sender, EventArgs e)
@@ -179,10 +199,7 @@ namespace IT8512A_Power_Test
         // connect/disconnect port
         private void buttonSerialConnect_Click_1(object sender, EventArgs e)
         {
-            if(comboBoxProductCode.Enabled == true)
-                comboBoxProductCode.Enabled = false;
-            else
-                comboBoxProductCode.Enabled = true;
+
             try
             {
                 if (Port.IsOpen)
@@ -197,7 +214,7 @@ namespace IT8512A_Power_Test
                 {
                     Port.Open();
                     buttonSerialConnect.Text = "CLOSE";
-                   // toolStripStatusConnect.Text = "IT8512A has connected";
+                    // toolStripStatusConnect.Text = "IT8512A has connected";
                     timer1.Enabled = true;
                     Message_allow = true;
                 }
@@ -241,13 +258,19 @@ namespace IT8512A_Power_Test
         }
         private void timer1_Tick(object sender, EventArgs e)
         {
+            timer1.Dispose();
+            timer1.Interval = 500;
+            timer1.Start();
             DrawChart(Statistics_OK, Statistics_NG);
             VolA_H = productsList[comboBoxProductCode.SelectedIndex].AVoltageHighLevel;
             VolB_H = productsList[comboBoxProductCode.SelectedIndex].BVoltageHighLevel;
             VolA_L = productsList[comboBoxProductCode.SelectedIndex].AVoltageLowLevel;
             VolB_L = productsList[comboBoxProductCode.SelectedIndex].BVoltageLowLevel;
-            labelVoltageA.Text = "Min:" + VolA_L.ToString("F3") + " V  Max:" + VolA_H.ToString("F3") + " V";
-            labelVoltageB.Text = "Min:" + VolA_L.ToString("F3") + " V  Max:" + VolA_H.ToString("F3") + " V";
+
+            labelVoltageA.Font = new System.Drawing.Font(labelVoltageA.Font.Name, labelVoltageA.Width/20, FontStyle.Bold);
+            labelVoltageB.Font = new System.Drawing.Font(labelVoltageB.Font.Name, labelVoltageB.Width / 20, FontStyle.Bold);
+            labelVoltageA.Text = "Min: " + VolA_L.ToString("F3") + " V  Max: " + VolA_H.ToString("F3") + " V";
+            labelVoltageB.Text = "Min: " + VolA_L.ToString("F3") + " V  Max: " + VolA_H.ToString("F3") + " V";
             try
             {
                 if (Port.IsOpen)
@@ -259,7 +282,7 @@ namespace IT8512A_Power_Test
                     else
                         toolStripStatusConnect.Text = "IT8512A has dis connected";
                 }
-            
+
             }
             catch (Exception Port)
             {
@@ -441,20 +464,20 @@ namespace IT8512A_Power_Test
         }
         public void setLabelA_Empty()
         {
-            labelResultA.BackColor = System.Drawing.Color.DarkViolet;
-            labelResultA.ForeColor = System.Drawing.Color.White;
+            labelResultA.BackColor = System.Drawing.Color.Pink;
+            labelResultA.ForeColor = System.Drawing.Color.Black;
             labelResultA.Text = "Empty";
         }
         public void setLabelB_Empty()
         {
-            labelResultB.BackColor = System.Drawing.Color.DarkViolet;
-            labelResultB.ForeColor = System.Drawing.Color.White;
+            labelResultB.BackColor = System.Drawing.Color.Pink;
+            labelResultB.ForeColor = System.Drawing.Color.Black;
             labelResultB.Text = "Empty";
         }
         public void setLabelfinalTestResult_Empty()
         {
-            labelfinalTestResult.BackColor = System.Drawing.Color.DarkViolet;
-            labelfinalTestResult.ForeColor = System.Drawing.Color.White;
+            labelfinalTestResult.BackColor = System.Drawing.Color.Pink;
+            labelfinalTestResult.ForeColor = System.Drawing.Color.Black;
             labelfinalTestResult.Text = "Empty";
         }
 
@@ -464,8 +487,8 @@ namespace IT8512A_Power_Test
             VolB_H = productsList[comboBoxProductCode.SelectedIndex].BVoltageHighLevel;
             VolA_L = productsList[comboBoxProductCode.SelectedIndex].AVoltageLowLevel;
             VolB_L = productsList[comboBoxProductCode.SelectedIndex].BVoltageLowLevel;
-            labelVoltageA.Text = "Min: " + VolA_L.ToString("F3") + " V  Max: " + VolA_L.ToString("F3") + " V";
-            labelVoltageB.Text = "Min: " + VolB_L.ToString("F3") + " V  Max: " + VolB_L.ToString("F3") + " V";
+            labelVoltageA.Text = "Min: " + VolA_L.ToString("F3") + " V  Max: " + VolA_H.ToString("F3") + " V";
+            labelVoltageB.Text = "Min: " + VolB_L.ToString("F3") + " V  Max: " + VolB_H.ToString("F3") + " V";
             setLabelB_Empty();
             setLabelA_Empty();
             setLabelfinalTestResult_Empty();
@@ -476,8 +499,13 @@ namespace IT8512A_Power_Test
         {
             // You should replace the bold image
             // in the sample below with an icon of your own choosing.  
-            // Note the escape character used (@) when specifying the path.  
-            pictureBox1.BackgroundImage = Image.FromFile(Path.GetDirectoryName(Application.ExecutablePath)+ @"\image\DJ96-00222.jpg");
+            // Note the escape character used (@) when specifying the path.
+            if (pictureBox1.Image != null)
+            {
+                pictureBox1.Image.Dispose();
+            }
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.Image = Image.FromFile(Path.GetDirectoryName(Application.ExecutablePath) + @"\im\" + comboBoxProductCode.SelectedItem.ToString() + ".jpg");
         }
 
         private void loginToolStripMenuItem_Click(object sender, EventArgs e)
@@ -493,7 +521,28 @@ namespace IT8512A_Power_Test
 
         private void teToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            new Form3().ShowDialog();
+            Permission = "Techniccal";
+            settingToolStripMenuItem.Enabled = true;
+            comboBoxBaudrate.Enabled = true;
+            comboBoxDatabit.Enabled = true;
+            comboBoxEndBit.Enabled = true;
+            comboBoxParity.Enabled = true;
+        }
+
+        private void oPToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Permission = "OP";
+            settingToolStripMenuItem.Enabled = false;
+            comboBoxBaudrate.Enabled = false;
+            comboBoxDatabit.Enabled = false;
+            comboBoxEndBit.Enabled = false;
+            comboBoxParity.Enabled = false;
+        }
+
+        private void loadSettingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Serial_UI_init();
+            ProductindomationInit();
         }
 
         private void comPortSettingToolStripMenuItem_Click(object sender, EventArgs e)
@@ -505,7 +554,7 @@ namespace IT8512A_Power_Test
         {
             if (Port.IsOpen)
             {
-                if(button1.Text == "CONNECT")
+                if (button1.Text == "CONNECT")
                 {
                     Port.Write("SSSS");
                     button1.Text = "DISCONNECT";
@@ -515,7 +564,7 @@ namespace IT8512A_Power_Test
                     Port.Write("EEEE");
                     button1.Text = "CONNECT";
                 }
-            }       
+            }
         }
 
         private void DrawChart(int okNumber, int ngNumber)
@@ -559,19 +608,21 @@ namespace IT8512A_Power_Test
             {
                 pictureBox.Image.Dispose();
             }
-                 
             pictureBox.Image = custormChart;
         }
 
         private void timer2_Tick(object sender, EventArgs e)
         {
+            timer2.Dispose();
+            timer2.Start();
+
             if (timer2.Interval == 2000)
             {
                 setLabelA_Empty();
                 setLabelB_Empty();
                 setLabelfinalTestResult_Empty();
-                label3.BackColor = Color.White;
-                label2.BackColor = Color.White;
+                //label3.BackColor = Color.White;
+                //label2.BackColor = Color.White;
                 timer2.Stop();
             }
 
@@ -590,7 +641,6 @@ namespace IT8512A_Power_Test
             labelfinalTestResult.ForeColor = System.Drawing.Color.Red;
             labelfinalTestResult.Text = "NG";
         }
-
 
 
 
@@ -640,21 +690,21 @@ namespace IT8512A_Power_Test
                 DataReciver = "";
                 chanelBcherked = true;
             }
-                try
-                {
-                    hexString = Reverse(InputString.Substring(6, 8));
-                    num = Int32.Parse(hexString, System.Globalization.NumberStyles.HexNumber);
-                    value = num / 1000.0;
+            try
+            {
+                hexString = Reverse(InputString.Substring(6, 8));
+                num = Int32.Parse(hexString, System.Globalization.NumberStyles.HexNumber);
+                value = num / 1000.0;
                 if (chanelAcherked == false)
                     checkValue(value, "chanelA");
                 else if (chanelBcherked == false)
                     checkValue(value, "chanelB");
                 else
                     checkValue(value, "Result");
-                }
-                catch (Exception)
-                {
-                }
+            }
+            catch (Exception)
+            {
+            }
         }
         public string Reverse(string text)
         {
@@ -692,4 +742,14 @@ namespace IT8512A_Power_Test
         }
 
     }
+
+    public class Report
+        {
+        public string dateTime;
+        public productCode model;
+        public string textResuilt;
+
+
+
+        }
 }
