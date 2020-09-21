@@ -33,3 +33,15 @@ D:\DEV\3. DEV Projects\6. IT8512 test machine\2.Software\IT8512A Power Test\obj\
 D:\DEV\3. DEV Projects\6. IT8512 test machine\2.Software\IT8512A Power Test\obj\Release\IT8512A Power Test.csproj.CopyComplete
 D:\DEV\3. DEV Projects\6. IT8512 test machine\2.Software\IT8512A Power Test\obj\Release\IT8512A Power Test.exe
 D:\DEV\3. DEV Projects\6. IT8512 test machine\2.Software\IT8512A Power Test\obj\Release\IT8512A Power Test.pdb
+F:\1. Project\1. IT8512A\IT8512A-Power-testing\2.Software\IT8512A Power Test Rev1.0\IT8512A Power Test\bin\Release\IT8512A Power Test.exe.config
+F:\1. Project\1. IT8512A\IT8512A-Power-testing\2.Software\IT8512A Power Test Rev1.0\IT8512A Power Test\bin\Release\IT8512A Power Test.exe
+F:\1. Project\1. IT8512A\IT8512A-Power-testing\2.Software\IT8512A Power Test Rev1.0\IT8512A Power Test\bin\Release\IT8512A Power Test.pdb
+F:\1. Project\1. IT8512A\IT8512A-Power-testing\2.Software\IT8512A Power Test Rev1.0\IT8512A Power Test\obj\Release\IT8512A Power Test.csprojAssemblyReference.cache
+F:\1. Project\1. IT8512A\IT8512A-Power-testing\2.Software\IT8512A Power Test Rev1.0\IT8512A Power Test\obj\Release\IT8512A_Power_Test.Form1.resources
+F:\1. Project\1. IT8512A\IT8512A-Power-testing\2.Software\IT8512A Power Test Rev1.0\IT8512A Power Test\obj\Release\IT8512A_Power_Test.Form2.resources
+F:\1. Project\1. IT8512A\IT8512A-Power-testing\2.Software\IT8512A Power Test Rev1.0\IT8512A Power Test\obj\Release\IT8512A_Power_Test.Form3.resources
+F:\1. Project\1. IT8512A\IT8512A-Power-testing\2.Software\IT8512A Power Test Rev1.0\IT8512A Power Test\obj\Release\IT8512A_Power_Test.Properties.Resources.resources
+F:\1. Project\1. IT8512A\IT8512A-Power-testing\2.Software\IT8512A Power Test Rev1.0\IT8512A Power Test\obj\Release\IT8512A Power Test.csproj.GenerateResource.cache
+F:\1. Project\1. IT8512A\IT8512A-Power-testing\2.Software\IT8512A Power Test Rev1.0\IT8512A Power Test\obj\Release\IT8512A Power Test.csproj.CoreCompileInputs.cache
+F:\1. Project\1. IT8512A\IT8512A-Power-testing\2.Software\IT8512A Power Test Rev1.0\IT8512A Power Test\obj\Release\IT8512A Power Test.exe
+F:\1. Project\1. IT8512A\IT8512A-Power-testing\2.Software\IT8512A Power Test Rev1.0\IT8512A Power Test\obj\Release\IT8512A Power Test.pdb

@@ -61,13 +61,13 @@ namespace IT8512A_Power_Test
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(456, 160);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(583, 474);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // buttonCancel
             // 
             this.buttonCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonCancel.Location = new System.Drawing.Point(342, 114);
+            this.buttonCancel.Location = new System.Drawing.Point(453, 428);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(52, 23);
             this.buttonCancel.TabIndex = 3;
@@ -78,7 +78,7 @@ namespace IT8512A_Power_Test
             // buttonApply
             // 
             this.buttonApply.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonApply.Location = new System.Drawing.Point(261, 114);
+            this.buttonApply.Location = new System.Drawing.Point(356, 428);
             this.buttonApply.Name = "buttonApply";
             this.buttonApply.Size = new System.Drawing.Size(75, 23);
             this.buttonApply.TabIndex = 4;
@@ -89,7 +89,7 @@ namespace IT8512A_Power_Test
             // buttonOK
             // 
             this.buttonOK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonOK.Location = new System.Drawing.Point(400, 114);
+            this.buttonOK.Location = new System.Drawing.Point(527, 428);
             this.buttonOK.Name = "buttonOK";
             this.buttonOK.Size = new System.Drawing.Size(53, 23);
             this.buttonOK.TabIndex = 2;
@@ -112,30 +112,30 @@ namespace IT8512A_Power_Test
             this.tableLayoutPanel2.Controls.Add(this.label2, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.label4, 2, 1);
             this.tableLayoutPanel2.Controls.Add(this.comboBoxProductCode, 2, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 160);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(450, 105);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(577, 105);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
             // textBoxMinVol
             // 
             this.textBoxMinVol.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxMinVol.Location = new System.Drawing.Point(115, 55);
+            this.textBoxMinVol.Location = new System.Drawing.Point(147, 55);
             this.textBoxMinVol.Name = "textBoxMinVol";
-            this.textBoxMinVol.Size = new System.Drawing.Size(106, 38);
+            this.textBoxMinVol.Size = new System.Drawing.Size(138, 38);
             this.textBoxMinVol.TabIndex = 0;
             this.textBoxMinVol.TextChanged += new System.EventHandler(this.textBoxMinVol_TextChanged);
             // 
             // textBoxMaxVol
             // 
             this.textBoxMaxVol.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxMaxVol.Location = new System.Drawing.Point(339, 55);
+            this.textBoxMaxVol.Location = new System.Drawing.Point(435, 55);
             this.textBoxMaxVol.Name = "textBoxMaxVol";
-            this.textBoxMaxVol.Size = new System.Drawing.Size(108, 38);
+            this.textBoxMaxVol.Size = new System.Drawing.Size(139, 38);
             this.textBoxMaxVol.TabIndex = 1;
             this.textBoxMaxVol.TextChanged += new System.EventHandler(this.textBoxMaxVol_TextChanged);
             // 
@@ -147,7 +147,7 @@ namespace IT8512A_Power_Test
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(218, 52);
+            this.label1.Size = new System.Drawing.Size(282, 52);
             this.label1.TabIndex = 2;
             this.label1.Text = "Model";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -157,7 +157,7 @@ namespace IT8512A_Power_Test
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(49, 52);
+            this.label2.Location = new System.Drawing.Point(81, 52);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(60, 31);
             this.label2.TabIndex = 3;
@@ -168,7 +168,7 @@ namespace IT8512A_Power_Test
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(266, 52);
+            this.label4.Location = new System.Drawing.Point(362, 52);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(67, 31);
             this.label4.TabIndex = 5;
@@ -178,11 +178,13 @@ namespace IT8512A_Power_Test
             // 
             this.tableLayoutPanel2.SetColumnSpan(this.comboBoxProductCode, 2);
             this.comboBoxProductCode.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.comboBoxProductCode.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxProductCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxProductCode.FormattingEnabled = true;
-            this.comboBoxProductCode.Location = new System.Drawing.Point(227, 3);
+            this.comboBoxProductCode.ImeMode = System.Windows.Forms.ImeMode.Off;
+            this.comboBoxProductCode.Location = new System.Drawing.Point(291, 3);
             this.comboBoxProductCode.Name = "comboBoxProductCode";
-            this.comboBoxProductCode.Size = new System.Drawing.Size(220, 47);
+            this.comboBoxProductCode.Size = new System.Drawing.Size(283, 47);
             this.comboBoxProductCode.TabIndex = 6;
             this.comboBoxProductCode.SelectedIndexChanged += new System.EventHandler(this.comboBoxProductCode_SelectedIndexChanged);
             // 
@@ -190,7 +192,7 @@ namespace IT8512A_Power_Test
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(456, 160);
+            this.ClientSize = new System.Drawing.Size(583, 474);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "Form2";
             this.Text = "Setting min max voltage";

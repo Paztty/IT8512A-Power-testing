@@ -149,30 +149,6 @@ F:\1. Project\1. IT8512A\IT8512A-Power-testing\2.Software\IT8512A Power Test Rev
 F:\1. Project\1. IT8512A\IT8512A-Power-testing\2.Software\IT8512A Power Test Rev1.0\IT8512A Power Test\bin\Debug\IT8512A Power Test.exe.config
 F:\1. Project\1. IT8512A\IT8512A-Power-testing\2.Software\IT8512A Power Test Rev1.0\IT8512A Power Test\bin\Debug\IT8512A Power Test.exe
 F:\1. Project\1. IT8512A\IT8512A-Power-testing\2.Software\IT8512A Power Test Rev1.0\IT8512A Power Test\bin\Debug\IT8512A Power Test.pdb
-F:\1. Project\1. IT8512A\IT8512A-Power-testing\2.Software\IT8512A Power Test Rev1.0\IT8512A Power Test\bin\Debug\LiveCharts.dll
-F:\1. Project\1. IT8512A\IT8512A-Power-testing\2.Software\IT8512A Power Test Rev1.0\IT8512A Power Test\bin\Debug\LiveCharts.WinForms.dll
-F:\1. Project\1. IT8512A\IT8512A-Power-testing\2.Software\IT8512A Power Test Rev1.0\IT8512A Power Test\bin\Debug\LiveCharts.Wpf.dll
-F:\1. Project\1. IT8512A\IT8512A-Power-testing\2.Software\IT8512A Power Test Rev1.0\IT8512A Power Test\bin\Debug\ZedGraph.dll
-F:\1. Project\1. IT8512A\IT8512A-Power-testing\2.Software\IT8512A Power Test Rev1.0\IT8512A Power Test\bin\Debug\LiveCharts.pdb
-F:\1. Project\1. IT8512A\IT8512A-Power-testing\2.Software\IT8512A Power Test Rev1.0\IT8512A Power Test\bin\Debug\LiveCharts.xml
-F:\1. Project\1. IT8512A\IT8512A-Power-testing\2.Software\IT8512A Power Test Rev1.0\IT8512A Power Test\bin\Debug\LiveCharts.WinForms.pdb
-F:\1. Project\1. IT8512A\IT8512A-Power-testing\2.Software\IT8512A Power Test Rev1.0\IT8512A Power Test\bin\Debug\LiveCharts.WinForms.xml
-F:\1. Project\1. IT8512A\IT8512A-Power-testing\2.Software\IT8512A Power Test Rev1.0\IT8512A Power Test\bin\Debug\LiveCharts.Wpf.pdb
-F:\1. Project\1. IT8512A\IT8512A-Power-testing\2.Software\IT8512A Power Test Rev1.0\IT8512A Power Test\bin\Debug\LiveCharts.Wpf.xml
-F:\1. Project\1. IT8512A\IT8512A-Power-testing\2.Software\IT8512A Power Test Rev1.0\IT8512A Power Test\bin\Debug\ZedGraph.xml
-F:\1. Project\1. IT8512A\IT8512A-Power-testing\2.Software\IT8512A Power Test Rev1.0\IT8512A Power Test\bin\Debug\de\ZedGraph.resources.dll
-F:\1. Project\1. IT8512A\IT8512A-Power-testing\2.Software\IT8512A Power Test Rev1.0\IT8512A Power Test\bin\Debug\es\ZedGraph.resources.dll
-F:\1. Project\1. IT8512A\IT8512A-Power-testing\2.Software\IT8512A Power Test Rev1.0\IT8512A Power Test\bin\Debug\fr\ZedGraph.resources.dll
-F:\1. Project\1. IT8512A\IT8512A-Power-testing\2.Software\IT8512A Power Test Rev1.0\IT8512A Power Test\bin\Debug\hu\ZedGraph.resources.dll
-F:\1. Project\1. IT8512A\IT8512A-Power-testing\2.Software\IT8512A Power Test Rev1.0\IT8512A Power Test\bin\Debug\it\ZedGraph.resources.dll
-F:\1. Project\1. IT8512A\IT8512A-Power-testing\2.Software\IT8512A Power Test Rev1.0\IT8512A Power Test\bin\Debug\ja\ZedGraph.resources.dll
-F:\1. Project\1. IT8512A\IT8512A-Power-testing\2.Software\IT8512A Power Test Rev1.0\IT8512A Power Test\bin\Debug\pt\ZedGraph.resources.dll
-F:\1. Project\1. IT8512A\IT8512A-Power-testing\2.Software\IT8512A Power Test Rev1.0\IT8512A Power Test\bin\Debug\ru\ZedGraph.resources.dll
-F:\1. Project\1. IT8512A\IT8512A-Power-testing\2.Software\IT8512A Power Test Rev1.0\IT8512A Power Test\bin\Debug\sk\ZedGraph.resources.dll
-F:\1. Project\1. IT8512A\IT8512A-Power-testing\2.Software\IT8512A Power Test Rev1.0\IT8512A Power Test\bin\Debug\sv\ZedGraph.resources.dll
-F:\1. Project\1. IT8512A\IT8512A-Power-testing\2.Software\IT8512A Power Test Rev1.0\IT8512A Power Test\bin\Debug\tr\ZedGraph.resources.dll
-F:\1. Project\1. IT8512A\IT8512A-Power-testing\2.Software\IT8512A Power Test Rev1.0\IT8512A Power Test\bin\Debug\zh-cn\ZedGraph.resources.dll
-F:\1. Project\1. IT8512A\IT8512A-Power-testing\2.Software\IT8512A Power Test Rev1.0\IT8512A Power Test\bin\Debug\zh-tw\ZedGraph.resources.dll
 F:\1. Project\1. IT8512A\IT8512A-Power-testing\2.Software\IT8512A Power Test Rev1.0\IT8512A Power Test\obj\Debug\IT8512A Power Test.csprojAssemblyReference.cache
 F:\1. Project\1. IT8512A\IT8512A-Power-testing\2.Software\IT8512A Power Test Rev1.0\IT8512A Power Test\obj\Debug\IT8512A_Power_Test.Form1.resources
 F:\1. Project\1. IT8512A\IT8512A-Power-testing\2.Software\IT8512A Power Test Rev1.0\IT8512A Power Test\obj\Debug\IT8512A_Power_Test.Form2.resources
@@ -180,6 +156,6 @@ F:\1. Project\1. IT8512A\IT8512A-Power-testing\2.Software\IT8512A Power Test Rev
 F:\1. Project\1. IT8512A\IT8512A-Power-testing\2.Software\IT8512A Power Test Rev1.0\IT8512A Power Test\obj\Debug\IT8512A_Power_Test.Properties.Resources.resources
 F:\1. Project\1. IT8512A\IT8512A-Power-testing\2.Software\IT8512A Power Test Rev1.0\IT8512A Power Test\obj\Debug\IT8512A Power Test.csproj.GenerateResource.cache
 F:\1. Project\1. IT8512A\IT8512A-Power-testing\2.Software\IT8512A Power Test Rev1.0\IT8512A Power Test\obj\Debug\IT8512A Power Test.csproj.CoreCompileInputs.cache
-F:\1. Project\1. IT8512A\IT8512A-Power-testing\2.Software\IT8512A Power Test Rev1.0\IT8512A Power Test\obj\Debug\IT8512A Power Test.csproj.CopyComplete
 F:\1. Project\1. IT8512A\IT8512A-Power-testing\2.Software\IT8512A Power Test Rev1.0\IT8512A Power Test\obj\Debug\IT8512A Power Test.exe
 F:\1. Project\1. IT8512A\IT8512A-Power-testing\2.Software\IT8512A Power Test Rev1.0\IT8512A Power Test\obj\Debug\IT8512A Power Test.pdb
+F:\1. Project\1. IT8512A\IT8512A-Power-testing\2.Software\IT8512A Power Test Rev1.0\IT8512A Power Test\obj\Debug\IT8512A_Power_Test.Form4.resources

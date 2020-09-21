@@ -63,6 +63,16 @@ namespace IT8512A_Power_Test.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Dev_Logo_with_name {
+            get {
+                object obj = ResourceManager.GetObject("Dev Logo with name", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap DJ96_00222 {
             get {
                 object obj = ResourceManager.GetObject("DJ96-00222", resourceCulture);
