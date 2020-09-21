@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DocumentFormat.OpenXml.Spreadsheet;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -27,9 +28,10 @@ namespace IT8512A_Power_Test
         FillterMan fillterMan = new FillterMan();
         string reportFilePath = "";
         string[] productNameList = new string[Form1.productsList.Length +1];
+        public string exReport = "STT/" + "Final result/" + "Product name " + "/" + "Time" + "/" + "Chanel A" + "/" + "ResultA" + "/" + "Chanel B" + "/" + "ResultB" + "\n";
 
         public int Ok, NG, Total;
-
+        public string ExportReportPath = "";
 
         public Form3()
         {
@@ -102,9 +104,11 @@ namespace IT8512A_Power_Test
                     {
                         if (dataInLine[1].Contains("OK")) Ok++;
                         if (dataInLine[1].Contains("NG")) NG++;
-                        if (dataInLine[0].Contains("L")) Total++;
-                        dgReport.Rows.Add(Total.ToString(), dataInLine[1], dataInLine[2], dataInLine[3], dataInLine[4], dataInLine[5], dataInLine[6], dataInLine[7]);
-
+                        if (dataInLine[0].Contains("L"))
+                        {
+                            Total++;
+                            dgReport.Rows.Add(Total.ToString(), dataInLine[1], dataInLine[2], dataInLine[3], dataInLine[4], dataInLine[5], dataInLine[6], dataInLine[7]);
+                        }
                     }
 
                 }
@@ -126,8 +130,11 @@ namespace IT8512A_Power_Test
                     dataInLine = lines[i].Split('/');
                     if (dataInLine[1].Contains("OK")) Ok++;
                     if (dataInLine[1].Contains("NG")) NG++;
-                    if (dataInLine[0].Contains("L")) Total++;
-                    dgReport.Rows.Add(Total.ToString(), dataInLine[1], dataInLine[2], dataInLine[3], dataInLine[4], dataInLine[5], dataInLine[6], dataInLine[7]);
+                    if (dataInLine[0].Contains("L"))
+                    {
+                        Total++;
+                        dgReport.Rows.Add(Total.ToString(), dataInLine[1], dataInLine[2], dataInLine[3], dataInLine[4], dataInLine[5], dataInLine[6], dataInLine[7]);
+                    }
                 }
                 lbStaTTnum.Text = Total.ToString();
                 lbStaOKnum.Text = Ok.ToString("D");
@@ -178,6 +185,43 @@ namespace IT8512A_Power_Test
             }
         }
 
+        private void btExport_Click(object sender, EventArgs e)
+        {
+            exReport = "STT/" + "Final result/" + "Product name " + "/" + "Time" + "/" + "Chanel A" + "/" + "ResultA" + "/" + "Chanel B" + "/" + "ResultB" + "\n";
+
+            for (int i = 0; i < dgReport.Rows.Count - 1; i++)
+                {
+                    for (int j = 0; j < dgReport.Columns.Count; j++)
+                    {
+                        exReport += dgReport.Rows[i].Cells[j].Value.ToString();
+                        exReport += "/";
+                    }
+                    exReport += System.Environment.NewLine;
+                }
+            
+            saveFileReport.DefaultExt =".txt";
+            saveFileReport.ShowDialog();
+        }
+
+        private void saveFileReport_FileOk(object sender, CancelEventArgs e)
+        {
+            if (saveFileReport.CheckFileExists == true)
+            {
+                MessageBox.Show("Save fail, file exists : " + saveFileReport.FileName.ToString());
+            }
+            else {
+                ExportReportPath = saveFileReport.FileName.ToString();
+                {
+                    using (StreamWriter sw = File.AppendText(ExportReportPath))
+                    {
+                        sw.WriteLine(exReport);
+                    }
+                }
+            }
+
+
+        }
+
         private void btloadToday_Click(object sender, EventArgs e)
         {
             dgReport.Rows.Clear();
@@ -190,10 +234,6 @@ namespace IT8512A_Power_Test
             loadReportToday();
         }
 
-        private void nbYearFrom_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 
     class FillterMan

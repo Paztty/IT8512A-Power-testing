@@ -127,7 +127,7 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1326, 573);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1152, 397);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // tableLayoutPanel4
@@ -140,14 +140,14 @@
             this.tableLayoutPanel4.Controls.Add(this.tableLayoutPanel6, 0, 1);
             this.tableLayoutPanel4.Controls.Add(this.pictureBox1, 0, 2);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(979, 3);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(851, 3);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 4;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 53.06749F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 75F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 46.93251F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(344, 567);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(298, 391);
             this.tableLayoutPanel4.TabIndex = 3;
             // 
             // pictureBox
@@ -155,17 +155,17 @@
             this.pictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox.Location = new System.Drawing.Point(3, 3);
             this.pictureBox.Name = "pictureBox";
-            this.pictureBox.Size = new System.Drawing.Size(338, 242);
+            this.pictureBox.Size = new System.Drawing.Size(292, 148);
             this.pictureBox.TabIndex = 0;
             this.pictureBox.TabStop = false;
             // 
             // rawResponse
             // 
             this.rawResponse.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rawResponse.Location = new System.Drawing.Point(3, 545);
+            this.rawResponse.Location = new System.Drawing.Point(3, 369);
             this.rawResponse.Name = "rawResponse";
             this.rawResponse.ReadOnly = true;
-            this.rawResponse.Size = new System.Drawing.Size(338, 20);
+            this.rawResponse.Size = new System.Drawing.Size(292, 20);
             this.rawResponse.TabIndex = 2;
             // 
             // tableLayoutPanel6
@@ -177,11 +177,11 @@
             this.tableLayoutPanel6.Controls.Add(this.tableLayoutPanel7, 0, 0);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 251);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 157);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 1;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(338, 69);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(292, 69);
             this.tableLayoutPanel6.TabIndex = 3;
             // 
             // tableLayoutPanel7
@@ -210,7 +210,7 @@
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(330, 61);
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(284, 61);
             this.tableLayoutPanel7.TabIndex = 1;
             // 
             // label20
@@ -245,7 +245,7 @@
             this.lbDailyTotal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbDailyTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbDailyTotal.ForeColor = System.Drawing.Color.Blue;
-            this.lbDailyTotal.Location = new System.Drawing.Point(263, 40);
+            this.lbDailyTotal.Location = new System.Drawing.Point(217, 40);
             this.lbDailyTotal.Name = "lbDailyTotal";
             this.lbDailyTotal.Size = new System.Drawing.Size(64, 21);
             this.lbDailyTotal.TabIndex = 8;
@@ -258,7 +258,7 @@
             this.lbDailyNG.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbDailyNG.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbDailyNG.ForeColor = System.Drawing.Color.Red;
-            this.lbDailyNG.Location = new System.Drawing.Point(197, 40);
+            this.lbDailyNG.Location = new System.Drawing.Point(151, 40);
             this.lbDailyNG.Name = "lbDailyNG";
             this.lbDailyNG.Size = new System.Drawing.Size(60, 21);
             this.lbDailyNG.TabIndex = 7;
@@ -273,7 +273,7 @@
             this.lbDailyOK.ForeColor = System.Drawing.Color.Lime;
             this.lbDailyOK.Location = new System.Drawing.Point(125, 40);
             this.lbDailyOK.Name = "lbDailyOK";
-            this.lbDailyOK.Size = new System.Drawing.Size(66, 21);
+            this.lbDailyOK.Size = new System.Drawing.Size(20, 21);
             this.lbDailyOK.TabIndex = 6;
             this.lbDailyOK.Text = "0";
             this.lbDailyOK.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -286,7 +286,7 @@
             this.label5.ForeColor = System.Drawing.Color.Lime;
             this.label5.Location = new System.Drawing.Point(125, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(66, 20);
+            this.label5.Size = new System.Drawing.Size(20, 20);
             this.label5.TabIndex = 0;
             this.label5.Text = "OK";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -297,7 +297,7 @@
             this.label9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Blue;
-            this.label9.Location = new System.Drawing.Point(263, 0);
+            this.label9.Location = new System.Drawing.Point(217, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(64, 20);
             this.label9.TabIndex = 2;
@@ -310,7 +310,7 @@
             this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Red;
-            this.label7.Location = new System.Drawing.Point(197, 0);
+            this.label7.Location = new System.Drawing.Point(151, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(60, 20);
             this.label7.TabIndex = 1;
@@ -323,7 +323,7 @@
             this.labelStatisticsTotal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelStatisticsTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelStatisticsTotal.ForeColor = System.Drawing.Color.Blue;
-            this.labelStatisticsTotal.Location = new System.Drawing.Point(263, 20);
+            this.labelStatisticsTotal.Location = new System.Drawing.Point(217, 20);
             this.labelStatisticsTotal.Name = "labelStatisticsTotal";
             this.labelStatisticsTotal.Size = new System.Drawing.Size(64, 20);
             this.labelStatisticsTotal.TabIndex = 5;
@@ -336,7 +336,7 @@
             this.labelStatisticNG.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelStatisticNG.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelStatisticNG.ForeColor = System.Drawing.Color.Red;
-            this.labelStatisticNG.Location = new System.Drawing.Point(197, 20);
+            this.labelStatisticNG.Location = new System.Drawing.Point(151, 20);
             this.labelStatisticNG.Name = "labelStatisticNG";
             this.labelStatisticNG.Size = new System.Drawing.Size(60, 20);
             this.labelStatisticNG.TabIndex = 4;
@@ -351,7 +351,7 @@
             this.labelStatisticOK.ForeColor = System.Drawing.Color.Lime;
             this.labelStatisticOK.Location = new System.Drawing.Point(125, 20);
             this.labelStatisticOK.Name = "labelStatisticOK";
-            this.labelStatisticOK.Size = new System.Drawing.Size(66, 20);
+            this.labelStatisticOK.Size = new System.Drawing.Size(20, 20);
             this.labelStatisticOK.TabIndex = 3;
             this.labelStatisticOK.Text = "0";
             this.labelStatisticOK.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -362,9 +362,9 @@
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.No;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.InitialImage = global::IT8512A_Power_Test.Properties.Resources.DJ96_00222;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 326);
+            this.pictureBox1.Location = new System.Drawing.Point(3, 232);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(338, 213);
+            this.pictureBox1.Size = new System.Drawing.Size(292, 131);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
@@ -400,7 +400,7 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(970, 567);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(842, 391);
             this.tableLayoutPanel3.TabIndex = 2;
             // 
             // labelResultB
@@ -410,10 +410,10 @@
             this.labelResultB.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelResultB.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelResultB.ForeColor = System.Drawing.Color.Red;
-            this.labelResultB.Location = new System.Drawing.Point(563, 173);
+            this.labelResultB.Location = new System.Drawing.Point(489, 122);
             this.labelResultB.Margin = new System.Windows.Forms.Padding(3);
             this.labelResultB.Name = "labelResultB";
-            this.labelResultB.Size = new System.Drawing.Size(399, 49);
+            this.labelResultB.Size = new System.Drawing.Size(345, 32);
             this.labelResultB.TabIndex = 11;
             this.labelResultB.Text = "NG";
             this.labelResultB.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -425,10 +425,10 @@
             this.labelResultA.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelResultA.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelResultA.ForeColor = System.Drawing.Color.Blue;
-            this.labelResultA.Location = new System.Drawing.Point(151, 173);
+            this.labelResultA.Location = new System.Drawing.Point(132, 122);
             this.labelResultA.Margin = new System.Windows.Forms.Padding(3);
             this.labelResultA.Name = "labelResultA";
-            this.labelResultA.Size = new System.Drawing.Size(406, 49);
+            this.labelResultA.Size = new System.Drawing.Size(351, 32);
             this.labelResultA.TabIndex = 10;
             this.labelResultA.Text = "OK";
             this.labelResultA.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -439,11 +439,11 @@
             this.label11.BackColor = System.Drawing.Color.White;
             this.label11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(8, 173);
+            this.label11.Location = new System.Drawing.Point(8, 122);
             this.label11.Margin = new System.Windows.Forms.Padding(3);
             this.label11.Name = "label11";
             this.tableLayoutPanel3.SetRowSpan(this.label11, 2);
-            this.label11.Size = new System.Drawing.Size(137, 386);
+            this.label11.Size = new System.Drawing.Size(118, 261);
             this.label11.TabIndex = 9;
             this.label11.Text = "RESULT";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -455,10 +455,10 @@
             this.labelGetVolB.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelGetVolB.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelGetVolB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.labelGetVolB.Location = new System.Drawing.Point(563, 118);
+            this.labelGetVolB.Location = new System.Drawing.Point(489, 84);
             this.labelGetVolB.Margin = new System.Windows.Forms.Padding(3);
             this.labelGetVolB.Name = "labelGetVolB";
-            this.labelGetVolB.Size = new System.Drawing.Size(399, 49);
+            this.labelGetVolB.Size = new System.Drawing.Size(345, 32);
             this.labelGetVolB.TabIndex = 8;
             this.labelGetVolB.Text = "GET";
             this.labelGetVolB.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -470,10 +470,10 @@
             this.labelGetVolA.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelGetVolA.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelGetVolA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.labelGetVolA.Location = new System.Drawing.Point(151, 118);
+            this.labelGetVolA.Location = new System.Drawing.Point(132, 84);
             this.labelGetVolA.Margin = new System.Windows.Forms.Padding(3);
             this.labelGetVolA.Name = "labelGetVolA";
-            this.labelGetVolA.Size = new System.Drawing.Size(406, 49);
+            this.labelGetVolA.Size = new System.Drawing.Size(351, 32);
             this.labelGetVolA.TabIndex = 7;
             this.labelGetVolA.Text = "GET";
             this.labelGetVolA.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -485,10 +485,10 @@
             this.label8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label8.Location = new System.Drawing.Point(8, 118);
+            this.label8.Location = new System.Drawing.Point(8, 84);
             this.label8.Margin = new System.Windows.Forms.Padding(3);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(137, 49);
+            this.label8.Size = new System.Drawing.Size(118, 32);
             this.label8.TabIndex = 6;
             this.label8.Text = "READ";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -500,10 +500,10 @@
             this.labelVoltageB.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelVoltageB.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelVoltageB.ForeColor = System.Drawing.Color.Green;
-            this.labelVoltageB.Location = new System.Drawing.Point(563, 63);
+            this.labelVoltageB.Location = new System.Drawing.Point(489, 46);
             this.labelVoltageB.Margin = new System.Windows.Forms.Padding(3);
             this.labelVoltageB.Name = "labelVoltageB";
-            this.labelVoltageB.Size = new System.Drawing.Size(399, 49);
+            this.labelVoltageB.Size = new System.Drawing.Size(345, 32);
             this.labelVoltageB.TabIndex = 5;
             this.labelVoltageB.Text = "SLOT";
             this.labelVoltageB.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -515,10 +515,10 @@
             this.labelVoltageA.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelVoltageA.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelVoltageA.ForeColor = System.Drawing.Color.Green;
-            this.labelVoltageA.Location = new System.Drawing.Point(151, 63);
+            this.labelVoltageA.Location = new System.Drawing.Point(132, 46);
             this.labelVoltageA.Margin = new System.Windows.Forms.Padding(3);
             this.labelVoltageA.Name = "labelVoltageA";
-            this.labelVoltageA.Size = new System.Drawing.Size(406, 49);
+            this.labelVoltageA.Size = new System.Drawing.Size(351, 32);
             this.labelVoltageA.TabIndex = 4;
             this.labelVoltageA.Text = "SLOT";
             this.labelVoltageA.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -530,10 +530,10 @@
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Green;
-            this.label4.Location = new System.Drawing.Point(8, 63);
+            this.label4.Location = new System.Drawing.Point(8, 46);
             this.label4.Margin = new System.Windows.Forms.Padding(3);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(137, 49);
+            this.label4.Size = new System.Drawing.Size(118, 32);
             this.label4.TabIndex = 3;
             this.label4.Text = "SPEC";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -544,10 +544,10 @@
             this.label2.BackColor = System.Drawing.Color.White;
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(151, 8);
+            this.label2.Location = new System.Drawing.Point(132, 8);
             this.label2.Margin = new System.Windows.Forms.Padding(3);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(406, 49);
+            this.label2.Size = new System.Drawing.Size(351, 32);
             this.label2.TabIndex = 1;
             this.label2.Text = "A";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -561,7 +561,7 @@
             this.label1.Location = new System.Drawing.Point(8, 8);
             this.label1.Margin = new System.Windows.Forms.Padding(3);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(137, 49);
+            this.label1.Size = new System.Drawing.Size(118, 32);
             this.label1.TabIndex = 0;
             this.label1.Text = "SLOT";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -572,10 +572,10 @@
             this.label3.BackColor = System.Drawing.Color.White;
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(563, 8);
+            this.label3.Location = new System.Drawing.Point(489, 8);
             this.label3.Margin = new System.Windows.Forms.Padding(3);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(399, 49);
+            this.label3.Size = new System.Drawing.Size(345, 32);
             this.label3.TabIndex = 2;
             this.label3.Text = "B";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -586,10 +586,10 @@
             this.tableLayoutPanel3.SetColumnSpan(this.labelfinalTestResult, 2);
             this.labelfinalTestResult.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelfinalTestResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 100F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelfinalTestResult.Location = new System.Drawing.Point(151, 228);
+            this.labelfinalTestResult.Location = new System.Drawing.Point(132, 160);
             this.labelfinalTestResult.Margin = new System.Windows.Forms.Padding(3);
             this.labelfinalTestResult.Name = "labelfinalTestResult";
-            this.labelfinalTestResult.Size = new System.Drawing.Size(811, 331);
+            this.labelfinalTestResult.Size = new System.Drawing.Size(702, 223);
             this.labelfinalTestResult.TabIndex = 12;
             this.labelfinalTestResult.Text = "OK";
             this.labelfinalTestResult.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -622,12 +622,12 @@
             this.tableLayoutPanel2.Controls.Add(this.buttonRefesh, 5, 0);
             this.tableLayoutPanel2.Controls.Add(this.button1, 7, 0);
             this.tableLayoutPanel2.ForeColor = System.Drawing.Color.Black;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(12, 651);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(12, 475);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1326, 48);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1152, 48);
             this.tableLayoutPanel2.TabIndex = 2;
             // 
             // buttonSerialConnect
@@ -636,10 +636,10 @@
             this.buttonSerialConnect.Dock = System.Windows.Forms.DockStyle.Fill;
             this.buttonSerialConnect.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSerialConnect.ForeColor = System.Drawing.Color.Red;
-            this.buttonSerialConnect.Location = new System.Drawing.Point(892, 3);
+            this.buttonSerialConnect.Location = new System.Drawing.Point(779, 3);
             this.buttonSerialConnect.Name = "buttonSerialConnect";
             this.tableLayoutPanel2.SetRowSpan(this.buttonSerialConnect, 2);
-            this.buttonSerialConnect.Size = new System.Drawing.Size(112, 42);
+            this.buttonSerialConnect.Size = new System.Drawing.Size(95, 42);
             this.buttonSerialConnect.TabIndex = 13;
             this.buttonSerialConnect.Text = "OPEN";
             this.buttonSerialConnect.UseVisualStyleBackColor = false;
@@ -652,7 +652,7 @@
             this.comboBoxComPort.FormattingEnabled = true;
             this.comboBoxComPort.Location = new System.Drawing.Point(3, 25);
             this.comboBoxComPort.Name = "comboBoxComPort";
-            this.comboBoxComPort.Size = new System.Drawing.Size(238, 21);
+            this.comboBoxComPort.Size = new System.Drawing.Size(203, 21);
             this.comboBoxComPort.TabIndex = 11;
             this.comboBoxComPort.SelectedIndexChanged += new System.EventHandler(this.comboBoxComPort_SelectedIndexChanged);
             // 
@@ -661,7 +661,7 @@
             this.label16.AutoSize = true;
             this.label16.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label16.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(735, 0);
+            this.label16.Location = new System.Drawing.Point(629, 0);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(101, 22);
             this.label16.TabIndex = 10;
@@ -673,9 +673,9 @@
             this.label15.AutoSize = true;
             this.label15.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label15.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(613, 0);
+            this.label15.Location = new System.Drawing.Point(525, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(116, 22);
+            this.label15.Size = new System.Drawing.Size(98, 22);
             this.label15.TabIndex = 9;
             this.label15.Text = "PARITY";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -685,9 +685,9 @@
             this.label14.AutoSize = true;
             this.label14.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label14.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(491, 0);
+            this.label14.Location = new System.Drawing.Point(421, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(116, 22);
+            this.label14.Size = new System.Drawing.Size(98, 22);
             this.label14.TabIndex = 8;
             this.label14.Text = "DATABIT";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -697,9 +697,9 @@
             this.label13.AutoSize = true;
             this.label13.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label13.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(247, 0);
+            this.label13.Location = new System.Drawing.Point(212, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(238, 22);
+            this.label13.Size = new System.Drawing.Size(203, 22);
             this.label13.TabIndex = 7;
             this.label13.Text = "BAUDRATE";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -709,7 +709,7 @@
             this.comboBoxEndBit.Dock = System.Windows.Forms.DockStyle.Fill;
             this.comboBoxEndBit.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxEndBit.FormattingEnabled = true;
-            this.comboBoxEndBit.Location = new System.Drawing.Point(735, 25);
+            this.comboBoxEndBit.Location = new System.Drawing.Point(629, 25);
             this.comboBoxEndBit.Name = "comboBoxEndBit";
             this.comboBoxEndBit.Size = new System.Drawing.Size(101, 21);
             this.comboBoxEndBit.TabIndex = 4;
@@ -720,9 +720,9 @@
             this.comboBoxParity.Dock = System.Windows.Forms.DockStyle.Fill;
             this.comboBoxParity.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxParity.FormattingEnabled = true;
-            this.comboBoxParity.Location = new System.Drawing.Point(613, 25);
+            this.comboBoxParity.Location = new System.Drawing.Point(525, 25);
             this.comboBoxParity.Name = "comboBoxParity";
-            this.comboBoxParity.Size = new System.Drawing.Size(116, 21);
+            this.comboBoxParity.Size = new System.Drawing.Size(98, 21);
             this.comboBoxParity.TabIndex = 3;
             this.comboBoxParity.SelectedIndexChanged += new System.EventHandler(this.comboBoxParity_SelectedIndexChanged);
             // 
@@ -731,9 +731,9 @@
             this.comboBoxDatabit.Dock = System.Windows.Forms.DockStyle.Fill;
             this.comboBoxDatabit.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxDatabit.FormattingEnabled = true;
-            this.comboBoxDatabit.Location = new System.Drawing.Point(491, 25);
+            this.comboBoxDatabit.Location = new System.Drawing.Point(421, 25);
             this.comboBoxDatabit.Name = "comboBoxDatabit";
-            this.comboBoxDatabit.Size = new System.Drawing.Size(116, 21);
+            this.comboBoxDatabit.Size = new System.Drawing.Size(98, 21);
             this.comboBoxDatabit.TabIndex = 2;
             this.comboBoxDatabit.SelectedIndexChanged += new System.EventHandler(this.comboBoxDatabit_SelectedIndexChanged);
             // 
@@ -742,9 +742,9 @@
             this.comboBoxBaudrate.Dock = System.Windows.Forms.DockStyle.Fill;
             this.comboBoxBaudrate.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxBaudrate.FormattingEnabled = true;
-            this.comboBoxBaudrate.Location = new System.Drawing.Point(247, 25);
+            this.comboBoxBaudrate.Location = new System.Drawing.Point(212, 25);
             this.comboBoxBaudrate.Name = "comboBoxBaudrate";
-            this.comboBoxBaudrate.Size = new System.Drawing.Size(238, 21);
+            this.comboBoxBaudrate.Size = new System.Drawing.Size(203, 21);
             this.comboBoxBaudrate.TabIndex = 1;
             this.comboBoxBaudrate.SelectedIndexChanged += new System.EventHandler(this.comboBoxBaudrate_SelectedIndexChanged);
             // 
@@ -755,7 +755,7 @@
             this.label12.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(3, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(238, 22);
+            this.label12.Size = new System.Drawing.Size(203, 22);
             this.label12.TabIndex = 6;
             this.label12.Text = "COM PORT";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -767,10 +767,10 @@
             this.buttonRefesh.BackgroundImage = global::IT8512A_Power_Test.Properties.Resources.refesh_icon;
             this.buttonRefesh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.buttonRefesh.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonRefesh.Location = new System.Drawing.Point(842, 3);
+            this.buttonRefesh.Location = new System.Drawing.Point(736, 3);
             this.buttonRefesh.Name = "buttonRefesh";
             this.tableLayoutPanel2.SetRowSpan(this.buttonRefesh, 2);
-            this.buttonRefesh.Size = new System.Drawing.Size(44, 42);
+            this.buttonRefesh.Size = new System.Drawing.Size(37, 42);
             this.buttonRefesh.TabIndex = 12;
             this.buttonRefesh.UseVisualStyleBackColor = false;
             this.buttonRefesh.Click += new System.EventHandler(this.buttonRefesh_Click);
@@ -781,10 +781,10 @@
             this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Maroon;
-            this.button1.Location = new System.Drawing.Point(1010, 3);
+            this.button1.Location = new System.Drawing.Point(880, 3);
             this.button1.Name = "button1";
             this.tableLayoutPanel2.SetRowSpan(this.button1, 2);
-            this.button1.Size = new System.Drawing.Size(313, 42);
+            this.button1.Size = new System.Drawing.Size(269, 42);
             this.button1.TabIndex = 14;
             this.button1.Text = "CONNECT";
             this.button1.UseVisualStyleBackColor = false;
@@ -803,7 +803,7 @@
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(1350, 49);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(1176, 49);
             this.tableLayoutPanel5.TabIndex = 4;
             // 
             // comboBoxProductCode
@@ -814,10 +814,10 @@
             this.comboBoxProductCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxProductCode.FormattingEnabled = true;
             this.comboBoxProductCode.ImeMode = System.Windows.Forms.ImeMode.Off;
-            this.comboBoxProductCode.Location = new System.Drawing.Point(674, 3);
+            this.comboBoxProductCode.Location = new System.Drawing.Point(587, 3);
             this.comboBoxProductCode.Name = "comboBoxProductCode";
             this.comboBoxProductCode.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.comboBoxProductCode.Size = new System.Drawing.Size(665, 39);
+            this.comboBoxProductCode.Size = new System.Drawing.Size(578, 39);
             this.comboBoxProductCode.TabIndex = 0;
             this.comboBoxProductCode.SelectedIndexChanged += new System.EventHandler(this.comboBoxProductCode_SelectedIndexChanged);
             // 
@@ -828,7 +828,7 @@
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(3, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(665, 49);
+            this.label6.Size = new System.Drawing.Size(578, 49);
             this.label6.TabIndex = 1;
             this.label6.Text = "Model";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -853,7 +853,7 @@
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1350, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1176, 24);
             this.menuStrip1.TabIndex = 5;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -909,7 +909,7 @@
             // modelSettingToolStripMenuItem
             // 
             this.modelSettingToolStripMenuItem.Name = "modelSettingToolStripMenuItem";
-            this.modelSettingToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.modelSettingToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
             this.modelSettingToolStripMenuItem.Text = "Model setting";
             this.modelSettingToolStripMenuItem.Click += new System.EventHandler(this.modelSettingToolStripMenuItem_Click);
             // 
@@ -945,7 +945,7 @@
             this.lbBigResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 300F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbBigResult.Location = new System.Drawing.Point(74, 78);
             this.lbBigResult.Name = "lbBigResult";
-            this.lbBigResult.Size = new System.Drawing.Size(1202, 484);
+            this.lbBigResult.Size = new System.Drawing.Size(1028, 419);
             this.lbBigResult.TabIndex = 6;
             this.lbBigResult.Text = "OK";
             this.lbBigResult.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -958,9 +958,9 @@
             this.toolStripStatusLabel3,
             this.serialPortStatus,
             this.tsPerLB});
-            this.statusStrip2.Location = new System.Drawing.Point(0, 707);
+            this.statusStrip2.Location = new System.Drawing.Point(0, 531);
             this.statusStrip2.Name = "statusStrip2";
-            this.statusStrip2.Size = new System.Drawing.Size(1350, 22);
+            this.statusStrip2.Size = new System.Drawing.Size(1176, 22);
             this.statusStrip2.TabIndex = 7;
             this.statusStrip2.Text = "statusStrip2";
             // 
@@ -994,7 +994,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1350, 729);
+            this.ClientSize = new System.Drawing.Size(1176, 553);
             this.Controls.Add(this.statusStrip2);
             this.Controls.Add(this.lbBigResult);
             this.Controls.Add(this.tableLayoutPanel5);

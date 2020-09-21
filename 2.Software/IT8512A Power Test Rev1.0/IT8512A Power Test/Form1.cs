@@ -58,8 +58,8 @@ namespace IT8512A_Power_Test
         public uint retryTestCounter = 0;
 
         public string pass;
-        public static string Permission = "OP";
-
+        //public static string Permission = "OP";
+        public static string Permission = "Technical";
         // end check var
 
         // product code

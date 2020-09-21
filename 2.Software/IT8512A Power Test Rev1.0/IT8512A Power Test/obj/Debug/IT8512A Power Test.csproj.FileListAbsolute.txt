@@ -159,3 +159,8 @@ F:\1. Project\1. IT8512A\IT8512A-Power-testing\2.Software\IT8512A Power Test Rev
 F:\1. Project\1. IT8512A\IT8512A-Power-testing\2.Software\IT8512A Power Test Rev1.0\IT8512A Power Test\obj\Debug\IT8512A Power Test.exe
 F:\1. Project\1. IT8512A\IT8512A-Power-testing\2.Software\IT8512A Power Test Rev1.0\IT8512A Power Test\obj\Debug\IT8512A Power Test.pdb
 F:\1. Project\1. IT8512A\IT8512A-Power-testing\2.Software\IT8512A Power Test Rev1.0\IT8512A Power Test\obj\Debug\IT8512A_Power_Test.Form4.resources
+F:\1. Project\1. IT8512A\IT8512A-Power-testing\2.Software\IT8512A Power Test Rev1.0\IT8512A Power Test\bin\Debug\DocumentFormat.OpenXml.dll
+F:\1. Project\1. IT8512A\IT8512A-Power-testing\2.Software\IT8512A Power Test Rev1.0\IT8512A Power Test\bin\Debug\System.IO.Packaging.dll
+F:\1. Project\1. IT8512A\IT8512A-Power-testing\2.Software\IT8512A Power Test Rev1.0\IT8512A Power Test\bin\Debug\DocumentFormat.OpenXml.xml
+F:\1. Project\1. IT8512A\IT8512A-Power-testing\2.Software\IT8512A Power Test Rev1.0\IT8512A Power Test\bin\Debug\System.IO.Packaging.xml
+F:\1. Project\1. IT8512A\IT8512A-Power-testing\2.Software\IT8512A Power Test Rev1.0\IT8512A Power Test\obj\Debug\IT8512A Power Test.csproj.CopyComplete

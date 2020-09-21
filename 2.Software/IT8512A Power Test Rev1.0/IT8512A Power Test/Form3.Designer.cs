@@ -30,9 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
             this.pnOption = new System.Windows.Forms.Panel();
+            this.btExport = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.btOptionClose = new System.Windows.Forms.Button();
-            this.btloadToday = new System.Windows.Forms.Button();
             this.btClearNG = new System.Windows.Forms.Button();
             this.gbStatisc = new System.Windows.Forms.GroupBox();
             this.lbStaNGnum = new System.Windows.Forms.Label();
@@ -52,6 +52,11 @@
             this.dgwReportCnBVol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgwReportCnBResult = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbFillter = new System.Windows.Forms.GroupBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btloadToday = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.lbTimerFillter = new System.Windows.Forms.Label();
             this.nbYearTo = new System.Windows.Forms.NumericUpDown();
             this.nbYearFrom = new System.Windows.Forms.NumericUpDown();
@@ -63,10 +68,7 @@
             this.cbModel = new System.Windows.Forms.ComboBox();
             this.cbDay = new System.Windows.Forms.ComboBox();
             this.cbMonth = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.saveFileReport = new System.Windows.Forms.SaveFileDialog();
             this.pnOption.SuspendLayout();
             this.gbStatisc.SuspendLayout();
             this.gbReport.SuspendLayout();
@@ -78,9 +80,9 @@
             // 
             // pnOption
             // 
+            this.pnOption.Controls.Add(this.btExport);
             this.pnOption.Controls.Add(this.label6);
             this.pnOption.Controls.Add(this.btOptionClose);
-            this.pnOption.Controls.Add(this.btloadToday);
             this.pnOption.Controls.Add(this.btClearNG);
             this.pnOption.Controls.Add(this.gbStatisc);
             this.pnOption.Controls.Add(this.gbReport);
@@ -89,6 +91,16 @@
             this.pnOption.Name = "pnOption";
             this.pnOption.Size = new System.Drawing.Size(858, 677);
             this.pnOption.TabIndex = 7;
+            // 
+            // btExport
+            // 
+            this.btExport.Location = new System.Drawing.Point(552, 640);
+            this.btExport.Name = "btExport";
+            this.btExport.Size = new System.Drawing.Size(149, 29);
+            this.btExport.TabIndex = 7;
+            this.btExport.Text = "Export this";
+            this.btExport.UseVisualStyleBackColor = true;
+            this.btExport.Click += new System.EventHandler(this.btExport_Click);
             // 
             // label6
             // 
@@ -112,19 +124,9 @@
             this.btOptionClose.UseVisualStyleBackColor = true;
             this.btOptionClose.Click += new System.EventHandler(this.btOptionClose_Click);
             // 
-            // btloadToday
-            // 
-            this.btloadToday.Location = new System.Drawing.Point(628, 640);
-            this.btloadToday.Name = "btloadToday";
-            this.btloadToday.Size = new System.Drawing.Size(74, 31);
-            this.btloadToday.TabIndex = 4;
-            this.btloadToday.Text = "Today";
-            this.btloadToday.UseVisualStyleBackColor = true;
-            this.btloadToday.Click += new System.EventHandler(this.btloadToday_Click);
-            // 
             // btClearNG
             // 
-            this.btClearNG.Location = new System.Drawing.Point(522, 640);
+            this.btClearNG.Location = new System.Drawing.Point(445, 640);
             this.btClearNG.Name = "btClearNG";
             this.btClearNG.Size = new System.Drawing.Size(100, 31);
             this.btClearNG.TabIndex = 3;
@@ -286,6 +288,7 @@
             // 
             this.gbFillter.Controls.Add(this.label7);
             this.gbFillter.Controls.Add(this.label3);
+            this.gbFillter.Controls.Add(this.btloadToday);
             this.gbFillter.Controls.Add(this.label2);
             this.gbFillter.Controls.Add(this.label1);
             this.gbFillter.Controls.Add(this.lbTimerFillter);
@@ -308,11 +311,57 @@
             this.gbFillter.TabStop = false;
             this.gbFillter.Text = "Fillter";
             // 
+            // label7
+            // 
+            this.label7.Location = new System.Drawing.Point(551, 8);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(123, 21);
+            this.label7.TabIndex = 17;
+            this.label7.Text = "Model";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label3
+            // 
+            this.label3.Location = new System.Drawing.Point(326, 8);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(121, 21);
+            this.label3.TabIndex = 16;
+            this.label3.Text = "Day";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btloadToday
+            // 
+            this.btloadToday.Location = new System.Drawing.Point(468, 32);
+            this.btloadToday.Name = "btloadToday";
+            this.btloadToday.Size = new System.Drawing.Size(74, 21);
+            this.btloadToday.TabIndex = 4;
+            this.btloadToday.Text = "Today";
+            this.btloadToday.UseVisualStyleBackColor = true;
+            this.btloadToday.Click += new System.EventHandler(this.btloadToday_Click);
+            // 
+            // label2
+            // 
+            this.label2.Location = new System.Drawing.Point(199, 8);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(121, 21);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "Month";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(70, 8);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(123, 21);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "Year";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // lbTimerFillter
             // 
-            this.lbTimerFillter.Location = new System.Drawing.Point(486, 64);
+            this.lbTimerFillter.Location = new System.Drawing.Point(554, 64);
             this.lbTimerFillter.Name = "lbTimerFillter";
-            this.lbTimerFillter.Size = new System.Drawing.Size(262, 21);
+            this.lbTimerFillter.Size = new System.Drawing.Size(194, 21);
             this.lbTimerFillter.TabIndex = 13;
             this.lbTimerFillter.Text = "Date time fillter";
             this.lbTimerFillter.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -355,7 +404,6 @@
             0,
             0,
             0});
-            this.nbYearFrom.ValueChanged += new System.EventHandler(this.nbYearFrom_ValueChanged);
             // 
             // label5
             // 
@@ -430,41 +478,10 @@
             this.cbMonth.Size = new System.Drawing.Size(121, 21);
             this.cbMonth.TabIndex = 0;
             // 
-            // label1
+            // saveFileReport
             // 
-            this.label1.Location = new System.Drawing.Point(70, 8);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(123, 21);
-            this.label1.TabIndex = 14;
-            this.label1.Text = "Year";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label2
-            // 
-            this.label2.Location = new System.Drawing.Point(199, 8);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(121, 21);
-            this.label2.TabIndex = 15;
-            this.label2.Text = "Month";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label3
-            // 
-            this.label3.Location = new System.Drawing.Point(326, 8);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(121, 21);
-            this.label3.TabIndex = 16;
-            this.label3.Text = "Day";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label7
-            // 
-            this.label7.Location = new System.Drawing.Point(551, 8);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(123, 21);
-            this.label7.TabIndex = 17;
-            this.label7.Text = "Model";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.saveFileReport.Tag = ".txt";
+            this.saveFileReport.FileOk += new System.ComponentModel.CancelEventHandler(this.saveFileReport_FileOk);
             // 
             // Form3
             // 
@@ -532,5 +549,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btExport;
+        private System.Windows.Forms.SaveFileDialog saveFileReport;
     }
 }
