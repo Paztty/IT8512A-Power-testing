@@ -6,6 +6,8 @@ using System.IO;
 using System.IO.Ports;
 using System.Xml.Serialization;
 using System.Runtime.CompilerServices;
+using System.Reflection;
+using System.Media;
 
 namespace IT8512A_Power_Test
 {
@@ -32,6 +34,9 @@ namespace IT8512A_Power_Test
             DrawChart(0, 0);
 
             checkPermission();
+
+                
+
         }
         // End Form load function
 
@@ -42,7 +47,8 @@ namespace IT8512A_Power_Test
         public String[] end_bit = { "none", "1", "1.5", "2" };
 
         //private volatile Int32[] FrameResponse = new Int32[10];
-
+        SoundPlayer NGsound = new SoundPlayer(Path.GetDirectoryName(Application.ExecutablePath) + @"\sound\NG.wav");
+        SoundPlayer OKsound = new SoundPlayer(Path.GetDirectoryName(Application.ExecutablePath) + @"\sound\OK.wav");
 
         delegate void SetTextCallback(String text);
 
@@ -58,8 +64,8 @@ namespace IT8512A_Power_Test
         public uint retryTestCounter = 0;
 
         public string pass;
-        //public static string Permission = "OP";
-        public static string Permission = "Technical";
+        public static string Permission = "OP";
+        //public static string Permission = "Technical";
         // end check var
 
         // product code
@@ -387,11 +393,13 @@ namespace IT8512A_Power_Test
                 {
                     Statistics_DailyOK++;
                     Statistics_OK++;
+                    OKsound.Play();
                 }
                 else if (labelfinalTestResult.Text == "NG")
                 {
                     Statistics_DailyNG++;
                     Statistics_NG++;
+                    NGsound.Play();
                 }   
                 reportWrite(labelGetVolA.Text, labelGetVolB.Text, labelResultA.Text, labelResultB.Text, labelfinalTestResult.Text);
                 DrawChart(Statistics_OK, Statistics_NG);
@@ -403,25 +411,25 @@ namespace IT8512A_Power_Test
         // Set result label on UI 
         public void setLabelA_OK()
         {
-            labelResultA.BackColor = System.Drawing.Color.White;
-            labelResultA.ForeColor = System.Drawing.Color.RoyalBlue;
+            labelResultA.BackColor = System.Drawing.Color.Green;
+            labelResultA.ForeColor = System.Drawing.Color.Black;
             labelResultA.Text = "OK";
         }
         public void setLabelA_NG()
         {
-            labelResultA.BackColor = System.Drawing.Color.Silver;
+            labelResultA.BackColor = System.Drawing.Color.Red;
             labelResultA.ForeColor = System.Drawing.Color.Black;
             labelResultA.Text = "NG";
         }
         public void setLabelB_OK()
         {
-            labelResultB.BackColor = System.Drawing.Color.White;
-            labelResultB.ForeColor = System.Drawing.Color.RoyalBlue;
+            labelResultB.BackColor = System.Drawing.Color.Green;
+            labelResultB.ForeColor = System.Drawing.Color.Black;
             labelResultB.Text = "OK";
         }
         public void setLabelB_NG()
         {
-            labelResultB.BackColor = System.Drawing.Color.Silver;
+            labelResultB.BackColor = System.Drawing.Color.Red;
             labelResultB.ForeColor = System.Drawing.Color.Black;
             labelResultB.Text = "NG";
         }
@@ -442,6 +450,35 @@ namespace IT8512A_Power_Test
             labelfinalTestResult.BackColor = System.Drawing.Color.White;
             labelfinalTestResult.ForeColor = System.Drawing.Color.Black;
             labelfinalTestResult.Text = "Empty";
+        }
+        public void setLabelfinalTestResult_OK()
+        {
+            labelfinalTestResult.BackColor = System.Drawing.Color.Green;
+            labelfinalTestResult.ForeColor = System.Drawing.Color.Black;
+            labelfinalTestResult.Text = "OK";
+            setlbBigResult_OK();
+        }
+        public void setLabelfinalTestResult_NG()
+        {
+            labelfinalTestResult.BackColor = System.Drawing.Color.Red;
+            labelfinalTestResult.ForeColor = System.Drawing.Color.Black;
+            labelfinalTestResult.Text = "NG";
+            setlbBigResult_NG();
+        }
+
+        public void setlbBigResult_OK()
+        {
+            lbBigResult.Visible = true;
+            lbBigResult.BackColor = System.Drawing.Color.Green;
+            lbBigResult.ForeColor = System.Drawing.Color.Black;
+            lbBigResult.Text = "OK";
+        }
+        public void setlbBigResult_NG()
+        {
+            lbBigResult.Visible = true;
+            lbBigResult.BackColor = System.Drawing.Color.Red;
+            lbBigResult.ForeColor = System.Drawing.Color.Black;
+            lbBigResult.Text = "NG";
         }
 
         public void comboBoxProductCode_SelectedIndexChanged(object sender, EventArgs e)
@@ -619,7 +656,7 @@ namespace IT8512A_Power_Test
             Graphics g = Graphics.FromImage(custormChart);
 
             //g.FillEllipse(Brushes.Red, pictureBox.Size.Width / 2 - pictureBox.Size.Height / 2, pictureBox.Size.Height / 2 - pictureBox.Size.Height / 2, pictureBox.Size.Height , pictureBox.Size.Height);
-            g.FillPie(Brushes.Lime, rect, 0, okRadian);
+            g.FillPie(Brushes.Green, rect, 0, okRadian);
             g.FillPie(Brushes.Red, rect, okRadian, ngRadian);
             //g.FillEllipse(Brushes.White, pictureBox.Size.Width / 2 - pictureBox.Size.Height / 2 + 10, pictureBox.Size.Height / 2 - pictureBox.Size.Height / 2 + 10, pictureBox.Size.Height - 20, pictureBox.Size.Height - 20);
             if (pictureBox.Image != null)
@@ -656,6 +693,11 @@ namespace IT8512A_Power_Test
             hidelbBigResult();
         }
 
+        private void tableLayoutPanel7_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             try
@@ -676,35 +718,11 @@ namespace IT8512A_Power_Test
             checkPermission();
         }
 
-        public void setLabelfinalTestResult_OK()
+        private void lbBigResult_Click(object sender, EventArgs e)
         {
-            labelfinalTestResult.BackColor = System.Drawing.Color.RoyalBlue;
-            labelfinalTestResult.ForeColor = System.Drawing.Color.Black;
-            labelfinalTestResult.Text = "OK";
-            setlbBigResult_OK();
-        }
-        public void setLabelfinalTestResult_NG()
-        {
-            labelfinalTestResult.BackColor = System.Drawing.Color.Silver;
-            labelfinalTestResult.ForeColor = System.Drawing.Color.Black;
-            labelfinalTestResult.Text = "NG";
-            setlbBigResult_NG();
         }
 
-        public void setlbBigResult_OK()
-        {
-            lbBigResult.Visible = true;
-            lbBigResult.BackColor = System.Drawing.Color.RoyalBlue;
-            lbBigResult.ForeColor = System.Drawing.Color.Black;
-            lbBigResult.Text = "OK";
-        }
-        public void setlbBigResult_NG()
-        {
-            lbBigResult.Visible = true;
-            lbBigResult.BackColor = System.Drawing.Color.Silver;
-            lbBigResult.ForeColor = System.Drawing.Color.Black;
-            lbBigResult.Text = "NG";
-        }
+
         public void hidelbBigResult()
         {
             lbBigResult.Visible = false;
@@ -914,12 +932,12 @@ namespace IT8512A_Power_Test
                 today_txt = "Report-" + DateTime.Now.ToString("yyyy-MM-dd");
 
 
-            if (!Directory.Exists(@"C:\Changer DC Tester\Report\")) Directory.CreateDirectory(@"C:\Changer DC Tester\Report\");
+            if (!Directory.Exists(@"C:\Charger DC Tester\Report\")) Directory.CreateDirectory(@"C:\Charger DC Tester\Report\");
 
-            if (File.Exists(@"C:\Changer DC Tester\Report\"+ today_txt + ".txt")) // Nếu file lịch sử tồn tại thì lưu thông tin vào
+            if (File.Exists(@"C:\Charger DC Tester\Report\"+ today_txt + ".txt")) // Nếu file lịch sử tồn tại thì lưu thông tin vào
             {
-                int line = File.ReadAllLines(@"C:\Changer DC Tester\Report\" + today_txt + ".txt").Length;
-                using (StreamWriter sw = File.AppendText(@"C:\Changer DC Tester\Report\" + today_txt + ".txt"))
+                int line = File.ReadAllLines(@"C:\Charger DC Tester\Report\" + today_txt + ".txt").Length;
+                using (StreamWriter sw = File.AppendText(@"C:\Charger DC Tester\Report\" + today_txt + ".txt"))
                 {
                     string reportData = "L" + line.ToString() + "/" + Result + "/" + productsList[comboBoxProductCode.SelectedIndex].name + "/" + moment + "/" + voltageA + "/" + resultA + "/" + voltageB + "/" + resultB;
                     sw.WriteLine(reportData);
@@ -928,7 +946,7 @@ namespace IT8512A_Power_Test
             }
             else
             {
-                using (StreamWriter sw = File.AppendText(@"C:\Changer DC Tester\Report\" + today_txt + ".txt"))
+                using (StreamWriter sw = File.AppendText(@"C:\Charger DC Tester\Report\" + today_txt + ".txt"))
                 {
                     string reportData = "STT/" + "Final result/" + "Product name " + "/" + "Time" + "/" + "Chanel A" + "/" + "ResultA" + "/" + "Chanel B" + "/" + "ResultB" + "\n";
                     reportData += "L" + "1" + "/" + Result + "/" + productsList[comboBoxProductCode.SelectedIndex].name + "/" + moment + "/" + voltageA + "/" + resultA + "/" + voltageB + "/" + resultB;

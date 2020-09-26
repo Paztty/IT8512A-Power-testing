@@ -84,7 +84,7 @@ namespace IT8512A_Power_Test
             String[] dataInLine;
             dgReport.SelectAll();
             dgReport.ClearSelection();
-            string pathReport = @"C:\Changer DC Tester\Report\Report-" + date.ToString("yyyy-MM-dd") + ".txt";
+            string pathReport = @"C:\Charger DC Tester\Report\Report-" + date.ToString("yyyy-MM-dd") + ".txt";
             if (File.Exists(pathReport)) // if computer has report file, push it on data grit view
             {
                 var lines = File.ReadAllLines(pathReport);
@@ -114,12 +114,12 @@ namespace IT8512A_Power_Test
                 }
                 lbStaTTnum.Text = Total.ToString();
                 lbStaOKnum.Text = Ok.ToString("D");
-                lbStaNGnum.Text = NG.ToString("D");
+                 lbStaNGnum.Text = NG.ToString("D");
             }
         }
         public void loadReportToday()
         {
-            string pathReport = @"C:\Changer DC Tester\Report\Report-" + DateTime.Now.ToString("yyyy-MM-dd") + ".txt";
+            string pathReport = @"C:\Charger DC Tester\Report\Report-" + DateTime.Now.ToString("yyyy-MM-dd") + ".txt";
             String[] dataInLine;
             if (File.Exists(pathReport)) // if computer has report file, push it on data grit view
             {

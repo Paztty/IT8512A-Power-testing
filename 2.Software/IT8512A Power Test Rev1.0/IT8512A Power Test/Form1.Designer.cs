@@ -187,10 +187,10 @@
             // tableLayoutPanel7
             // 
             this.tableLayoutPanel7.ColumnCount = 4;
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 122F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 66F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 70F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.57143F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.80953F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.80953F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.80953F));
             this.tableLayoutPanel7.Controls.Add(this.label20, 0, 2);
             this.tableLayoutPanel7.Controls.Add(this.label19, 0, 1);
             this.tableLayoutPanel7.Controls.Add(this.lbDailyTotal, 3, 2);
@@ -209,19 +209,19 @@
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel7.Size = new System.Drawing.Size(284, 61);
             this.tableLayoutPanel7.TabIndex = 1;
+            this.tableLayoutPanel7.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel7_Paint);
             // 
             // label20
             // 
             this.label20.AutoSize = true;
             this.label20.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.ForeColor = System.Drawing.Color.Lime;
+            this.label20.ForeColor = System.Drawing.Color.Green;
             this.label20.Location = new System.Drawing.Point(3, 40);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(116, 21);
+            this.label20.Size = new System.Drawing.Size(75, 21);
             this.label20.TabIndex = 10;
             this.label20.Text = "Daily Total";
             this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -231,10 +231,10 @@
             this.label19.AutoSize = true;
             this.label19.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.Color.Lime;
+            this.label19.ForeColor = System.Drawing.Color.Green;
             this.label19.Location = new System.Drawing.Point(3, 20);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(116, 20);
+            this.label19.Size = new System.Drawing.Size(75, 20);
             this.label19.TabIndex = 9;
             this.label19.Text = "Testing";
             this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -245,9 +245,9 @@
             this.lbDailyTotal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbDailyTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbDailyTotal.ForeColor = System.Drawing.Color.Blue;
-            this.lbDailyTotal.Location = new System.Drawing.Point(217, 40);
+            this.lbDailyTotal.Location = new System.Drawing.Point(218, 40);
             this.lbDailyTotal.Name = "lbDailyTotal";
-            this.lbDailyTotal.Size = new System.Drawing.Size(64, 21);
+            this.lbDailyTotal.Size = new System.Drawing.Size(63, 21);
             this.lbDailyTotal.TabIndex = 8;
             this.lbDailyTotal.Text = "0";
             this.lbDailyTotal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -260,7 +260,7 @@
             this.lbDailyNG.ForeColor = System.Drawing.Color.Red;
             this.lbDailyNG.Location = new System.Drawing.Point(151, 40);
             this.lbDailyNG.Name = "lbDailyNG";
-            this.lbDailyNG.Size = new System.Drawing.Size(60, 21);
+            this.lbDailyNG.Size = new System.Drawing.Size(61, 21);
             this.lbDailyNG.TabIndex = 7;
             this.lbDailyNG.Text = "0";
             this.lbDailyNG.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -270,10 +270,10 @@
             this.lbDailyOK.AutoSize = true;
             this.lbDailyOK.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbDailyOK.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbDailyOK.ForeColor = System.Drawing.Color.Lime;
-            this.lbDailyOK.Location = new System.Drawing.Point(125, 40);
+            this.lbDailyOK.ForeColor = System.Drawing.Color.Green;
+            this.lbDailyOK.Location = new System.Drawing.Point(84, 40);
             this.lbDailyOK.Name = "lbDailyOK";
-            this.lbDailyOK.Size = new System.Drawing.Size(20, 21);
+            this.lbDailyOK.Size = new System.Drawing.Size(61, 21);
             this.lbDailyOK.TabIndex = 6;
             this.lbDailyOK.Text = "0";
             this.lbDailyOK.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -283,10 +283,10 @@
             this.label5.AutoSize = true;
             this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Lime;
-            this.label5.Location = new System.Drawing.Point(125, 0);
+            this.label5.ForeColor = System.Drawing.Color.Green;
+            this.label5.Location = new System.Drawing.Point(84, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(20, 20);
+            this.label5.Size = new System.Drawing.Size(61, 20);
             this.label5.TabIndex = 0;
             this.label5.Text = "OK";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -297,9 +297,9 @@
             this.label9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Blue;
-            this.label9.Location = new System.Drawing.Point(217, 0);
+            this.label9.Location = new System.Drawing.Point(218, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(64, 20);
+            this.label9.Size = new System.Drawing.Size(63, 20);
             this.label9.TabIndex = 2;
             this.label9.Text = "Total";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -312,7 +312,7 @@
             this.label7.ForeColor = System.Drawing.Color.Red;
             this.label7.Location = new System.Drawing.Point(151, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(60, 20);
+            this.label7.Size = new System.Drawing.Size(61, 20);
             this.label7.TabIndex = 1;
             this.label7.Text = "NG";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -323,9 +323,9 @@
             this.labelStatisticsTotal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelStatisticsTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelStatisticsTotal.ForeColor = System.Drawing.Color.Blue;
-            this.labelStatisticsTotal.Location = new System.Drawing.Point(217, 20);
+            this.labelStatisticsTotal.Location = new System.Drawing.Point(218, 20);
             this.labelStatisticsTotal.Name = "labelStatisticsTotal";
-            this.labelStatisticsTotal.Size = new System.Drawing.Size(64, 20);
+            this.labelStatisticsTotal.Size = new System.Drawing.Size(63, 20);
             this.labelStatisticsTotal.TabIndex = 5;
             this.labelStatisticsTotal.Text = "0";
             this.labelStatisticsTotal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -338,7 +338,7 @@
             this.labelStatisticNG.ForeColor = System.Drawing.Color.Red;
             this.labelStatisticNG.Location = new System.Drawing.Point(151, 20);
             this.labelStatisticNG.Name = "labelStatisticNG";
-            this.labelStatisticNG.Size = new System.Drawing.Size(60, 20);
+            this.labelStatisticNG.Size = new System.Drawing.Size(61, 20);
             this.labelStatisticNG.TabIndex = 4;
             this.labelStatisticNG.Text = "0";
             this.labelStatisticNG.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -348,10 +348,10 @@
             this.labelStatisticOK.AutoSize = true;
             this.labelStatisticOK.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelStatisticOK.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelStatisticOK.ForeColor = System.Drawing.Color.Lime;
-            this.labelStatisticOK.Location = new System.Drawing.Point(125, 20);
+            this.labelStatisticOK.ForeColor = System.Drawing.Color.Green;
+            this.labelStatisticOK.Location = new System.Drawing.Point(84, 20);
             this.labelStatisticOK.Name = "labelStatisticOK";
-            this.labelStatisticOK.Size = new System.Drawing.Size(20, 20);
+            this.labelStatisticOK.Size = new System.Drawing.Size(61, 20);
             this.labelStatisticOK.TabIndex = 3;
             this.labelStatisticOK.Text = "0";
             this.labelStatisticOK.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -939,16 +939,17 @@
             this.lbBigResult.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbBigResult.BackColor = System.Drawing.Color.Silver;
+            this.lbBigResult.BackColor = System.Drawing.Color.Green;
             this.lbBigResult.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lbBigResult.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.lbBigResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 300F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbBigResult.Location = new System.Drawing.Point(74, 78);
             this.lbBigResult.Name = "lbBigResult";
-            this.lbBigResult.Size = new System.Drawing.Size(1028, 419);
+            this.lbBigResult.Size = new System.Drawing.Size(1039, 419);
             this.lbBigResult.TabIndex = 6;
             this.lbBigResult.Text = "OK";
             this.lbBigResult.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbBigResult.Click += new System.EventHandler(this.lbBigResult_Click);
             this.lbBigResult.DoubleClick += new System.EventHandler(this.lbBigResult_DoubleClick);
             // 
             // statusStrip2

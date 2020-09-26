@@ -81,7 +81,7 @@ uint8_t chanel_fist_test = 0, check_connection_status = 0, check_connection_last
     uint32_t loop_test_counter = 0;
 // sevice interval
     uint32_t check_connection_interval = 10;
-    uint32_t loop_test_interval = 30;
+    uint32_t loop_test_interval = 50;
 
 void setup()
 {
@@ -584,11 +584,11 @@ ISR (TIMER1_OVF_vect)
 void sevice_run()
 {
     Buzzer_counter++;
-    loop_test_counter++;
+    //loop_test_counter++;
     //check_connection_counter++;
     //check_connection(10);
     Buzzer_sevice(1,1);
-    loop_test();
+    //loop_test();
 }
 
 void check_connection( uint32_t interval)
