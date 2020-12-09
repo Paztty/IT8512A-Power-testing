@@ -17,7 +17,7 @@ namespace IT8512A_Power_Test
         {
             InitializeComponent();
             Port.DataReceived += new SerialDataReceivedEventHandler(DataReceive);
-            
+            ProductinformationInit();
         }
 
         // Form load funtion
@@ -30,13 +30,8 @@ namespace IT8512A_Power_Test
             }
             hidelbBigResult();
             Serial_UI_init();
-            ProductindomationInit();
             DrawChart(0, 0);
-
             checkPermission();
-
-                
-
         }
         // End Form load function
 
@@ -63,38 +58,88 @@ namespace IT8512A_Power_Test
         public bool chanelAcherked, chanelBcherked, waitResponse = false, retryTest = false;
         public uint retryTestCounter = 0;
 
+        string modelData;
         public string pass;
         public static string Permission = "OP";
         //public static string Permission = "Technical";
         // end check var
 
         // product code
-        public static productCode[] productsList =
-                {
+        public static productCode[] productsList;
+        public productCode[] productCodesInit = {
                 //new productCode("Test Soft 1", 30, 10, 30, 10,1),
                 //new productCode("Test Soft 2", 30, 10, 30, 10,2),
-                new productCode("DJ96-00216", 37.6,37.4,37.6,37.4,1),
-                new productCode("DJ96-00204", 24.95, 24.8, 24.95, 24.8,1),
-                new productCode("DJ96-00210", 20.8, 20.6, 20.8, 20.6,1),
-                new productCode("DJ96-00222", 25.95, 25.75, 25.95, 25.75,2),
-                new productCode("DJ96-00229B",25.95,25.75,25.95,25.75,2),
-                new productCode("DJ96-00229C",25.95,25.75,25.95,25.75,2),
-                new productCode("DJ96-00229D",25.95,25.75,25.95,25.75,2),
-                new productCode("DJ96-00229E",25.95,25.75,25.95,25.75,2),
-                new productCode("DJ96-00229F",25.95,25.75,25.95,25.75,2),
-                new productCode("DJ96-00229G",25.95,25.75,25.95,25.75,2),
-                new productCode("DJ96-00229H",25.95,25.75,25.95,25.75,2),
-                new productCode("DJ96-00229J",25.95,25.75,25.95,25.75,2),
-                new productCode("DJ96-00229K",25.95,25.75,25.95,25.75,2),
-                new productCode("DJ96-00229P",25.95,25.75,25.95,25.75,2),
-                new productCode("DJ96-00229Q",25.95,25.75,25.95,25.75,2),
-                new productCode("DJ96-00229L",25.95,25.75,25.95,25.75,2),
-                new productCode("DJ96-00229N",25.95,25.75,25.95,25.75,2),
-
+                new productCode("DJ96-00216", 37.6, 37.4, 37.6, 37.4, 1),
+                new productCode("DJ96-00204", 24.95, 24.8, 24.95, 24.8, 1),
+                new productCode("DJ96-00210", 20.8, 20.6, 20.8, 20.6, 1),
+                new productCode("DJ96-00222", 25.95, 25.70, 25.95, 25.70, 2),
+                new productCode("DJ96-00229B", 25.95, 25.70, 25.95, 25.70, 2),
+                new productCode("DJ96-00229C", 25.95, 25.70, 25.95, 25.70, 2),
+                new productCode("DJ96-00229D", 25.95, 25.70, 25.95, 25.70, 2),
+                new productCode("DJ96-00229E", 25.95, 25.70, 25.95, 25.70, 2),
+                new productCode("DJ96-00229F", 25.95, 25.70, 25.95, 25.70, 2),
+                new productCode("DJ96-00229G", 25.95, 25.70, 25.95, 25.70, 2),
+                new productCode("DJ96-00229H", 25.95, 25.70, 25.95, 25.70, 2),
+                new productCode("DJ96-00229J", 25.95, 25.70, 25.95, 25.70, 2),
+                new productCode("DJ96-00229K", 25.95, 25.70, 25.95, 25.70, 2),
+                new productCode("DJ96-00229P", 25.95, 25.70, 25.95, 25.70, 2),
+                new productCode("DJ96-00229Q", 25.95, 25.70, 25.95, 25.70, 2),
+                new productCode("DJ96-00229L", 25.95, 25.70, 25.95, 25.70, 2),
+                new productCode("DJ96-00229N", 25.95, 25.70, 25.95, 25.70, 2),
+                new productCode("DJ96-00229M", 25.95, 25.70, 25.95, 25.70, 2),
                     };
 
-        public void ProductindomationInit()
+
+    public void ProductinformationUpdate()
         {
+            if (!Directory.Exists(@"C:\Charger DC Tester\Model\")) Directory.CreateDirectory(@"C:\Charger DC Tester\Model\");
+            if (File.Exists(@"C:\Charger DC Tester\Model\model.txt"))
+            {
+                File.Delete(@"C:\Charger DC Tester\Model\model.txt");
+            }
+            for (int i = 0; i < productsList.Length; i++)
+            {
+                modelData += productsList[i].name + ","
+                    + productsList[i].AVoltageHighLevel.ToString("f2") + ","
+                    + productsList[i].AVoltageLowLevel.ToString("f2") + ","
+                    + productsList[i].BVoltageHighLevel.ToString("f2") + ","
+                    + productsList[i].BVoltageLowLevel.ToString("f2") + ","
+                    + productsList[i].Number_chanel + Environment.NewLine;
+            }
+            File.WriteAllText( @"C:\Charger DC Tester\Model\model.txt", modelData);
+        }
+
+        public void ProductinformationInit()
+        {
+            productsList = productCodesInit;
+            if (!Directory.Exists(@"C:\Charger DC Tester\Model\")) Directory.CreateDirectory(@"C:\Charger DC Tester\Model\");
+
+            if (File.Exists(@"C:\Charger DC Tester\Model\model.txt"))
+            {
+                string[] productSave = File.ReadAllLines(@"C:\Charger DC Tester\Model\model.txt");
+                productsList = new productCode[productSave.Length];
+                for (int i = 0; i < productSave.Length; i++)
+                {
+                    string[] buffer = productSave[i].Split(',');
+                    productCode product = new productCode(buffer[0], Convert.ToDouble(buffer[1]), Convert.ToDouble(buffer[2]), Convert.ToDouble(buffer[3]), Convert.ToDouble(buffer[4]), Convert.ToUInt32(buffer[5]));
+                    productsList[i] = product;
+                }
+            }
+            else
+            {
+                for (int i = 0; i < productsList.Length; i++)
+                {
+                    modelData += productsList[i].name + ","
+                        + productsList[i].AVoltageHighLevel.ToString("f2") + ","
+                        + productsList[i].AVoltageLowLevel.ToString("f2") + ","
+                        + productsList[i].BVoltageHighLevel.ToString("f2") + ","
+                        + productsList[i].BVoltageLowLevel.ToString("f2") + ","
+                        + productsList[i].Number_chanel + Environment.NewLine;
+                }
+                File.WriteAllText(@"C:\Charger DC Tester\Model\model.txt", modelData);
+            }
+
+
             string[] productNameList = new string[productsList.Length];
             for (int i = 0; i < productsList.Length; i++)
             {
@@ -258,7 +303,7 @@ namespace IT8512A_Power_Test
             VolB_H = productsList[comboBoxProductCode.SelectedIndex].BVoltageHighLevel;
             VolA_L = productsList[comboBoxProductCode.SelectedIndex].AVoltageLowLevel;
             VolB_L = productsList[comboBoxProductCode.SelectedIndex].BVoltageLowLevel;
-
+            checkPermission();
         }
 
         // Reciver data
@@ -307,13 +352,13 @@ namespace IT8512A_Power_Test
                         retryCounter++;
                 }
 
-                else if (volIn == 0)
-                {
-                    setLabelA_Empty();
-                    _result_A = "Empty";
-                    retryCounter++;
-                }
-                else if (volIn > 0)
+                //else if (volIn == 0)
+                //{
+                //    setLabelA_Empty();
+                //    _result_A = "Empty";
+                //    retryCounter++;
+                //}
+                else if (volIn >= 0)
                 {
                     setLabelA_NG();
                     _result_A = "NG";
@@ -336,13 +381,13 @@ namespace IT8512A_Power_Test
                     else
                         retryCounter++;
                 }
-                else if (volIn == 0)
-                {
-                    setLabelB_Empty();
-                    _result_B = "Empty";
-                    retryCounter++;
-                }
-                else if (volIn > 0)
+                //else if (volIn == 0)
+                //{
+                //    setLabelB_Empty();
+                //    _result_B = "Empty";
+                //    retryCounter++;
+                //}
+                else if (volIn >= 0)
                 {
                     setLabelB_NG();
                     _result_B = "NG";
@@ -698,8 +743,19 @@ namespace IT8512A_Power_Test
 
         }
 
+        private void addNewToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form5 form5 = new Form5();
+            if (form5.ShowDialog() == DialogResult.OK)
+            {
+                productsList = null;
+                ProductinformationInit();
+            }
+        }
+
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
+            ProductinformationUpdate();
             try
             {
                 Port.Close();
@@ -793,7 +849,6 @@ namespace IT8512A_Power_Test
                                         testDone = true;
                                         checkValue(0, 0);
                                     }
-
                                 }
                                 if (productsList[comboBoxProductCode.SelectedIndex].Number_chanel == 2 & retryCounter <= retryLoop * 2 + 1)
                                 {
@@ -954,7 +1009,6 @@ namespace IT8512A_Power_Test
                 }
             }
         }
-
     }
 
     public class productCode
@@ -966,6 +1020,14 @@ namespace IT8512A_Power_Test
         public double BVoltageLowLevel;
         public uint Number_chanel;
 
+        public productCode() {
+            this.name = "a";
+            this.AVoltageHighLevel = 1;
+            this.AVoltageLowLevel = 1;
+            this.BVoltageHighLevel = 1;
+            this.BVoltageLowLevel = 1;
+            this.Number_chanel = 1;
+        }
         public productCode(string name, double AvolHighLevel, double AvolLowLevel, double BvolHighLevel, double BvolLowLevel, uint Number_chanel)
         {
             this.name = name;
@@ -975,8 +1037,5 @@ namespace IT8512A_Power_Test
             this.BVoltageLowLevel = BvolLowLevel;
             this.Number_chanel = Number_chanel;
         }
-
     }
-
-
 }

@@ -60,10 +60,6 @@
 #define START_COUNTER                 (65536 - (TIMER * 16 *(unsigned long)1000/PRESCALER))
 
 
-
-
-
-
 uint32_t turn_test_counter;  //retry test counter
 
 uint8_t cmd[] = { 0xaa, 0x00, 0x5f, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x09 };
@@ -81,7 +77,7 @@ uint8_t chanel_fist_test = 0, check_connection_status = 0, check_connection_last
     uint32_t loop_test_counter = 0;
 // sevice interval
     uint32_t check_connection_interval = 10;
-    uint32_t loop_test_interval = 50;
+    uint32_t loop_test_interval = 10;
 
 void setup()
 {
@@ -120,13 +116,13 @@ void setup()
 
     pinMode(Buzzer_Pin, OUTPUT);
     digitalWrite(Buzzer_Pin, Buzzer_OFF);
-    // for(int i = 0; i <= 8; i++)
-    // {
-    //     digitalWrite(Buzzer_Pin, !digitalRead(Buzzer_Pin));
-    //     delay(150);
-    //     wdt_reset();
-    // }
-    // digitalWrite(Buzzer_Pin, Buzzer_OFF);
+    for(int i = 0; i <= 8; i++)
+    {
+        digitalWrite(Buzzer_Pin, !digitalRead(Buzzer_Pin));
+        delay(150);
+        wdt_reset();
+    }
+    digitalWrite(Buzzer_Pin, Buzzer_OFF);
 
 
     //attachInterrupt(digitalPinToInterrupt(3), connect_check, RISING);
@@ -584,11 +580,11 @@ ISR (TIMER1_OVF_vect)
 void sevice_run()
 {
     Buzzer_counter++;
-    //loop_test_counter++;
+    loop_test_counter++;
     //check_connection_counter++;
     //check_connection(10);
     Buzzer_sevice(1,1);
-    //loop_test();
+    loop_test();
 }
 
 void check_connection( uint32_t interval)
@@ -639,5 +635,3 @@ void Buzzer_sevice(uint32_t t_on, uint32_t t_off)
         digitalWrite(Buzzer_Pin,Buzzer_OFF);
     } 
 }
-
-

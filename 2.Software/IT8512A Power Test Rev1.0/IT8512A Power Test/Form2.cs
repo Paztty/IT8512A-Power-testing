@@ -33,8 +33,8 @@ namespace IT8512A_Power_Test
                 productNameList[i] = Form1.productsList[i].name;
             }
             comboBoxProductCode.DataSource = productNameList;
-            textBoxMaxVol.Text = Form1.productsList[comboBoxProductCode.SelectedIndex].AVoltageHighLevel.ToString("F3");
-            textBoxMinVol.Text = Form1.productsList[comboBoxProductCode.SelectedIndex].AVoltageLowLevel.ToString("F3");
+            textBoxMaxVol.Text = Form1.productsList[comboBoxProductCode.SelectedIndex].AVoltageHighLevel.ToString("F2");
+            textBoxMinVol.Text = Form1.productsList[comboBoxProductCode.SelectedIndex].AVoltageLowLevel.ToString("F2");
         }
         private void Form2_Load(object sender, EventArgs e)
         {

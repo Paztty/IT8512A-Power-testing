@@ -90,6 +90,7 @@
             this.teToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.settingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modelSettingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addNewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutIT8512APowerTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -361,7 +362,6 @@
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.No;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.InitialImage = global::IT8512A_Power_Test.Properties.Resources.DJ96_00222;
             this.pictureBox1.Location = new System.Drawing.Point(3, 232);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(292, 131);
@@ -808,12 +808,12 @@
             // 
             // comboBoxProductCode
             // 
-            this.comboBoxProductCode.AllowDrop = true;
             this.comboBoxProductCode.Dock = System.Windows.Forms.DockStyle.Fill;
             this.comboBoxProductCode.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxProductCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxProductCode.FormattingEnabled = true;
-            this.comboBoxProductCode.ImeMode = System.Windows.Forms.ImeMode.Off;
+            this.comboBoxProductCode.IntegralHeight = false;
+            this.comboBoxProductCode.ItemHeight = 31;
             this.comboBoxProductCode.Location = new System.Drawing.Point(587, 3);
             this.comboBoxProductCode.Name = "comboBoxProductCode";
             this.comboBoxProductCode.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -900,7 +900,8 @@
             // settingToolStripMenuItem
             // 
             this.settingToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.modelSettingToolStripMenuItem});
+            this.modelSettingToolStripMenuItem,
+            this.addNewToolStripMenuItem});
             this.settingToolStripMenuItem.Name = "settingToolStripMenuItem";
             this.settingToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
             this.settingToolStripMenuItem.Text = "Setting";
@@ -909,9 +910,16 @@
             // modelSettingToolStripMenuItem
             // 
             this.modelSettingToolStripMenuItem.Name = "modelSettingToolStripMenuItem";
-            this.modelSettingToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.modelSettingToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.modelSettingToolStripMenuItem.Text = "Model setting";
             this.modelSettingToolStripMenuItem.Click += new System.EventHandler(this.modelSettingToolStripMenuItem_Click);
+            // 
+            // addNewToolStripMenuItem
+            // 
+            this.addNewToolStripMenuItem.Name = "addNewToolStripMenuItem";
+            this.addNewToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.addNewToolStripMenuItem.Text = "Add new";
+            this.addNewToolStripMenuItem.Click += new System.EventHandler(this.addNewToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
@@ -996,8 +1004,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1176, 553);
-            this.Controls.Add(this.statusStrip2);
             this.Controls.Add(this.lbBigResult);
+            this.Controls.Add(this.statusStrip2);
             this.Controls.Add(this.tableLayoutPanel5);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.tableLayoutPanel2);
@@ -1103,6 +1111,7 @@
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel3;
         private System.Windows.Forms.ToolStripStatusLabel serialPortStatus;
         private System.Windows.Forms.ToolStripStatusLabel tsPerLB;
+        private System.Windows.Forms.ToolStripMenuItem addNewToolStripMenuItem;
     }
 }
 
